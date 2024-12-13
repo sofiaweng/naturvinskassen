@@ -1,78 +1,60 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 
-    /* Vil du overskrive eller extende tailwinds indstillinger?  */
-
-	theme: {
-
-        /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
-
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
-
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
-
-        /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
-
-        /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
-
-        /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
-
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
-
-		extend: {
+  /* Vil du overskrive eller extende tailwinds indstillinger?  */
+  theme: {
+    extend: {
+      colors: {
+        orange: {
+          300: "#FF9C66", //antal abonnement cirkel //hover button
+          400: "#FF7A33",
+          500: "#FF5900", // Main farve
+          600: "#CC4700",
+          700: "#993600",
         },
-	},
-	plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/container-queries'),
-    ],
-}
+        green: {
+          300: "#F9FE8A",
+          400: "#F7FE67", //hover button
+          500: "#F3FE40", // Main farve
+          600: "#F1FE01",
+          700: "#B2BC01",
+        },
+        white: "#FFFFF",
+        offwhite: "#F2F2F2",
+        lightgrey: "#C4C4C4",
+        darkgrey: "#686563",
+        black: "#00000",
+      },
+      spacing: {
+        xxs: "8px",
+        xs: "16px",
+        s: "24px",
+        sm: "32px",
+        m: "40px",
+        ml: "48px",
+        lg: "64px",
+        xl: "80px",
+        "2xl": "96px",
+        "3xl": "112px",
+      },
+      fontFamily: {
+        caslon: ["adobe-caslon-pro", "serif"],
+        opensans: ["open-sans", "sans-serif"],
+      },
+      fontSize: {
+        base: ["16px", { lineHeight: "auto" }],
+        headline3: ["64px", { lineHeight: "auto" }],
+        headline2: ["40px", { lineHeight: "42px" }],
+        headline1: ["55px", { lineHeight: "auto" }],
+      },
+    },
+  },
+
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+  ],
+};
