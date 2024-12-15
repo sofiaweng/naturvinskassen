@@ -1,6 +1,93 @@
 ---
+import Link from '../components/Link.astro'
+import { Image } from 'astro:assets';
+import Logo from "../assets/images/logo.svg";
+import Login from "../assets/images/login.svg";
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
+
+
+<div>
+    <div x-data="{ showmenu: false }" class="lg:static w-full ">
+        <div id="navbar" class="p-4 flex flex-row justify-between border-darkgrey border-b">
+            <div id="logo" class="self-center hover:scale-110 ease-linear duration-200 ">
+                <a href="/">
+                    <Image class="w-28" src={Logo} alt="logo ikon"></Image>
+                </a>
+            </div>
+            <nav id="desktopmenu" class="hidden lg:block self-center">
+                <div class="flex flex-row gap-8">
+                <ul class="flex flex-row gap-8 self-center">
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="" class=" font-semibold  hover:border-b-2 border-solid border-darkgrey ease-linear  transition-all duration-200">Naturvinskassen</a></li>
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="" class=" font-semibold hover:border-b-2 border-solid border-darkgrey transition-all duration-200">
+                        F.A.Q.</a></li>
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="" class="font-semibold  hover:border-b-2 border-solid border-darkgrey transition-all duration-200">Om os</a></li>
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="" class="font-semibold  hover:border-b-2 border-solid border-darkgrey transition-all duration-200">Kontakt</a></li>
+                </ul>
+                <a href="https://www.linkedin.com/in/sofia-weng-278525212/">
+                    <Image class="w-10 hover:scale-110 duration-200 ease-linear" src={Login} alt="linkedin ikon"></Image>
+                </a>
+            </div>
+            </nav>
+            <!-- Burgermenu -->
+            <div id="burgermenu" class="self-center lg:hidden p-2 cursor-pointer" x-on:click="showmenu = !showmenu">
+                <template x-if="!showmenu">
+                    <!-- Burgerikon -->
+                    <div>
+                        <span class="block w-10 h-1 bg-green-500 my-2"></span>
+                        <span class="block w-10 h-1 bg-green-500 my-2"></span>
+                        <span class="block w-10 h-1 bg-green-500 my-2"></span>
+                    </div>
+                </template>
+                <template x-if="showmenu">
+                    <!-- Traditionelt kryds -->
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <span class="absolute block w-full h-1 bg-green-500 transform rotate-45 ease-in"></span>
+                        <span class="absolute block w-full h-1 bg-green-500 transform -rotate-45 ease-in"></span>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <nav id="mobilmenu" class="flex flex-col content-center lg:hidden text-center py-1  "
+            x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
+            <div class="flex justify-between">
+                <Button variant="filled">knapknapknapknap</Button>
+                <a class=" pt-5 py-5  w-12 m-auto hover:scale-110  ease-linear duration-200"  href="https://www.linkedin.com/in/sofia-weng-278525212/">
+            
+                    <Image class="w-22" src={Login} alt="linkedin ikon"></Image>
+                </a>
+            </div>
+            
+            <ul class="flex flex-col gap-5    ">
+     
+                <li class="font-semibold   border-solid border-darkgrey"><a href="#aboutme" class="hover:font-semibold transition-all duration-200 ease-in-out">Forside</a></li>
+                <li class="font-semibold  border-solidborder-darkgrey "><a href="#experience" class="hover:font-semibold transition-all duration-200 ease-in-out">
+                    Naturvinskassen</a></li>
+                <li class="font-semibold border-solid border-darkgrey  "><a href="#contact" class="hover:font-semibold  transition-all duration-200 ease-in-out">F.A.Q.</a></li>
+                <li class="font-semibold border-solid border-darkgrey  "><a href="#contact" class="hover:font-semibold  transition-all duration-200 ease-in-out">Om os</a></li>
+                <li class="font-semibold border-solid border-darkgrey pb-5 "><a href="#contact" class="hover:font-semibold  transition-all duration-200 ease-in-out">Kontakt</a></li>
+            </ul>
+          <span class="border-t border-solid border-darkgrey w-1/6 m-auto"> </span>
+       
+               <div class="flex flex-row self-center gap-5 ">
+                <a href="mailto:sofiaw1268@hotmail.com" class=" hover:scale-110 duration-200 ease-linear">sofiaw1268@hotmail.com</a>
+                <span>/</span>
+            <a href="tel:+4560536233" class="pb-8 underline hover:scale-110  duration-200 ease-linear">+45 60 53 62 33</a>
+       </div>  </nav>
+    </div>
 </div>
-    
+
+<script>
+    /* //set active class on nav when the page is active */
+    const nav = document.querySelector("#desktopmenu");
+    const navLinks = nav.querySelectorAll("a");
+    const currentURL = window.location.href;
+    navLinks.forEach((link) => {
+        if (link.href === currentURL) {
+            link.classList.add("active");
+        }
+    });
+</script>
