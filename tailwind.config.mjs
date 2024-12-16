@@ -66,8 +66,8 @@ export default {
       },
 
       fontSize: {
-        display: ["48px", { lineHeight: "auto" }], // Mobile
-        "display-lg": ["96px", { lineHeight: "auto" }], // Desktop
+        display: ["48px", { lineHeight: "62px" }], // Mobile
+        "display-lg": ["96px", { lineHeight: "110px" }], // Desktop
       
         headline1: ["32px", { lineHeight: "auto" }], // Mobile
         "headline1-lg": ["64px", { lineHeight: "60px" }], // Desktop
