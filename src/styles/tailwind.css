@@ -39,4 +39,17 @@
     @apply font-opensans;
     @apply font-regular;
   }
+  @keyframes scroll {
+    0% {
+      transform: translate(0);
+    }
+
+    to {
+      transform: translate(-35%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+    animation-fill-mode: forwards;
+  }
 }
