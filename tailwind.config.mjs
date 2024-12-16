@@ -27,7 +27,6 @@ export default {
 
       spacing: {
         xxs: "4px",
-        "-3": "-3px",   // Ny værdi
         xs: "16px",
         s: "22px",
         "15": "15px", // Ny værdi
@@ -67,21 +66,22 @@ export default {
       },
 
       fontSize: {
-        display: ["96px", { lineHeight: "auto" }],
-        headline1: ["64px", { lineHeight: "auto" }],
-        headline2: ["40px", { lineHeight: "auto" }],
-        headline3: ["20px", { lineHeight: "auto" }],
-        body: ["16px", { lineHeight: "auto" }],
-
-        /* MOBILE FONT STØRRELSER */
-        sm: {
-          display: ["48px", { lineHeight: "auto" }],
-          headline1: ["32px", { lineHeight: "auto" }],
-          headline2: ["24px", { lineHeight: "auto" }],
-          headline3: ["20px", { lineHeight: "auto" }],
-          body: ["14px", { lineHeight: "auto" }],
-        },
+        display: ["48px", { lineHeight: "auto" }], // Mobile
+        "display-lg": ["96px", { lineHeight: "auto" }], // Desktop
+      
+        headline1: ["32px", { lineHeight: "auto" }], // Mobile
+        "headline1-lg": ["64px", { lineHeight: "auto" }], // Desktop
+      
+        headline2: ["24px", { lineHeight: "auto" }], // Mobile
+        "headline2-lg": ["40px", { lineHeight: "auto" }], // Desktop
+      
+        headline3: ["16px", { lineHeight: "auto" }], // Mobile
+        "headline3-lg": ["20px", { lineHeight: "auto" }], // Desktop
+      
+        body: ["14px", { lineHeight: "auto" }], // Mobile
+        "body-lg": ["16px", { lineHeight: "auto" }], // Desktop
       },
+      
 
       fontWeight: {
         regular: "400",
