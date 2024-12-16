@@ -9,20 +9,21 @@ import Accordion from "../components/Accordion.astro";
 ---
 <MainLayout title="Naturvinskassen">
 
-	<div class="relative w-[455px] mt-[30px] mx-auto h-[755px] flex flex-col items-center md:w-[900px] md:h-[800px] md:mt-[80px]">
+	<div class="relative w-[455px] mt-[30px] mx-auto h-[755px] flex flex-col items-center md:w-[897px] md:h-[799px] md:mt-[90px]">
+  
 		<!-- Billeder (Mobile & Desktop) -->
-		<div class="absolute flex justify-center w-full top-[110px] z-0 md:top-[93px] md:gap-[8px]">
+		<div class="absolute flex justify-center top-[110px] z-0 md:top-[93px] md:gap-[8px]">
 		  <!-- Left Image -->
 		  <img 
 			src="/src/assets/images/landing_1.webp" 
 			alt="Landing Image 1" 
-			class="w-[190px] h-auto ml-[40px] mb-[80px] md:w-[auto] md:h-[450px] md:ml-0 md:mb-[0px]"
+			class="w-[190px] h-auto ml-[40px] mb-[80px] md:w-[35%] md:h-auto md:ml-0 md:mb-[0px] md:mt-[7px]"
 		  />
 		  <!-- Right Image -->
 		  <img 
 			src="/src/assets/images/landing_2.webp" 
 			alt="Landing Image 2" 
-			class="w-[190px] h-auto mr-[40px] mt-[80px] md:w-[auto] md:h-[450px] md:mr-0 md:mt-[0px]"
+			class="w-[190px] h-auto mr-[40px] mt-[80px] md:w-[35%] md:h-auto md:mr-0 md:mt-[7px]"
 		  />
 		</div>
 	  
@@ -30,46 +31,44 @@ import Accordion from "../components/Accordion.astro";
 		<img 
 		  src="/src/assets/images/mobil_join_the.svg" 
 		  alt="Join The" 
-		  class="w-[337px] absolute top-[20px] left-1/2 -translate-x-1/2 z-10 block md:hidden" 
+		  class="w-[70%] max-w-[337px] absolute top-[20px] left-1/2 -translate-x-1/2 z-10 block md:hidden" 
 		/>
 	  
 		<!-- Club! SVG (Mobile Only) -->
 		<img 
 		  src="/src/assets/images/mobil_club.svg" 
 		  alt="Club!" 
-		  class="w-[215px] absolute top-[430px] left-1/2 -translate-x-1/2 z-10 block md:hidden"
+		  class="w-[50%] max-w-[215px] absolute top-[430px] left-1/2 -translate-x-1/2 z-10 block md:hidden"
 		/>
 	  
 		<!-- Desktop: Join The Club Unified SVG -->
 		<img 
 		  src="/src/assets/images/desktop_join_the_club.svg" 
 		  alt="Join The Club!" 
-		  class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[592px] z-10"
+		  class="hidden md:block absolute left-1/2 -translate-x-1/2 max-w-[640px] z-10"
 		/>
 	  
 		<!-- Wine Doodles (Left & Right for Desktop) -->
-		<div class="hidden md:flex flex-col gap-[20px] absolute left-0 top-[90px]">
-		  <img src="/src/assets/images/vin1.svg" alt="Vin1" class="w-[33px]">
-		  <img src="/src/assets/images/vin2.svg" alt="Vin2" class="w-[33px]">
-		  <img src="/src/assets/images/vin3.svg" alt="Vin3" class="w-[27px]">
-		  <img src="/src/assets/images/vin4.svg" alt="Vin4" class="w-[24px]">
+		<div class="hidden md:flex flex-col gap-[20px] absolute left-0 top-[90px] h-[480px]">
+		  <img src="/src/assets/images/vin1.svg" alt="Vin1" class="w-[33px] h-full object-contain">
+		  <img src="/src/assets/images/vin2.svg" alt="Vin2" class="w-[33px] h-full object-contain">
+		  <img src="/src/assets/images/vin3.svg" alt="Vin3" class="w-[27px] h-full object-contain">
+		  <img src="/src/assets/images/vin4.svg" alt="Vin4" class="w-[24px] h-full object-contain">
 		</div>
-		<div class="hidden md:flex flex-col gap-[20px] absolute right-0 top-[90px]">
-		  <img src="/src/assets/images/vin5.svg" alt="Vin5" class="w-[47px]">
-		  <img src="/src/assets/images/vin6.svg" alt="Vin6" class="w-[47px]">
-		  <img src="/src/assets/images/vin7.svg" alt="Vin7" class="w-[47px]">
-		  <img src="/src/assets/images/vin8.svg" alt="Vin8" class="w-[46px]">
+		<div class="hidden md:flex flex-col gap-[25px] absolute right-0 top-[90px] h-[480px]">
+		  <img src="/src/assets/images/vin5.svg" alt="Vin5" class="w-[47px] h-full object-contain">
+		  <img src="/src/assets/images/vin6.svg" alt="Vin6" class="w-[47px] h-full object-contain">
+		  <img src="/src/assets/images/vin7.svg" alt="Vin7" class="w-[47px] h-full object-contain">
+		  <img src="/src/assets/images/vin8.svg" alt="Vin8" class="w-[46px] h-full object-contain">
 		</div>
 	  
 		<!-- Forklarende tekst -->
-		<div class="absolute bottom-[120px] text-left px-xs w-full md:bottom-[140px] md:text-center md:w-[645px] md:mx-auto">
+		<div class="absolute bottom-[120px] text-left px-xs w-full md:bottom-[100px] md:text-center md:w-[685px] md:mx-auto">
 		  <h3 class="text-body font-opensans leading-relaxed md:text-headline3">
 			Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
 			udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
 			måned efter måned.
 		  </h3>
-
-		  
 		</div>
 	  
 		<!-- Knap (Mobile & Desktop) -->
@@ -79,8 +78,5 @@ import Accordion from "../components/Accordion.astro";
 	  </div>
 	  
 
-
-
-	  
 	  
 </MainLayout>
