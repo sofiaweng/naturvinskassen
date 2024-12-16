@@ -27,6 +27,7 @@ export default {
 
       spacing: {
         xxs: "4px",
+        "-3": "-3px",   // Ny værdi
         xs: "16px",
         s: "22px",
         "15": "15px", // Ny værdi
