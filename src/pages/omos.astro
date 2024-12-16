@@ -14,6 +14,7 @@ import Os from "../assets/images/os.svg";
 ---
 <MainLayout>
 <article class=" relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto py-8xl">
+    <!-- display tekst sættes til absolute, så det går udover billederne -->
     <div class=" absolute flex flex-row gap-m">
         <Image src={Om} alt=""></Image>
         <Image class="pt-6xl md:pt-0" src={Os} alt=""></Image>
@@ -22,6 +23,7 @@ import Os from "../assets/images/os.svg";
         <Image class="w-2/3 md:w-full" src={RasmusOgMichael} alt=""></Image>
     </div>
     <div class="self-center">
+         <!-- vinglas og flasker-->
        <div class="flex flex-row justify-between ">
             <Image class="aspect-[73/138] w-1/6" src={Vinglas1} alt=""></Image>
             <Image class="aspect-[73/138] w-1/6" src={VinFlaskeLeft} alt=""></Image>
@@ -29,6 +31,7 @@ import Os from "../assets/images/os.svg";
             <Image class="aspect-[73/138] w-1/6" src={VinFlaskeRight} alt=""></Image>
             <Image class="aspect-[73/138] w-1/6" src={Vinglas3} alt=""></Image>
        </div>
+        <!-- medarbejdere billeder, fjernes på mobil -->
         <Image class="hidden md:block" src={Medarbejdere} alt=""></Image>
     </div>
 </article>
