@@ -4,57 +4,126 @@ import Button from "../components/Button.astro";
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import VinCard from "../components/VinCard.astro";
+import Accordion from "../components/Accordion.astro";
 ---
 <MainLayout title="Titel">
 
+	<div data-aos="fade-up"
+	data-aos-delay="300"
+	 class="border-customBlack border-t col-span-2 overflow-hidden">
+		 <div class="overflow-hidden whitespace-nowrap border-customBlack border-b py-2 md:py-4"> 
+			<div class="inline-block animate-scroll min-w-full">
+				<span class=" text-2xl md:text-2xl text-center m-0 flex flex-row gap-8">
+					<span class="">HTML</span>
+					<span class="">/</span>
+					<span>CSS</span>
+					<span class="">/</span>
+					<span>JS</span>
+					<span class="">/</span>
+					<span>ALPHINE </span>
+					<span class="">/</span>
+					<span>TAILWIND</span> 
+					<span class="">/</span>
+					<span>ASTRO</span> 
+					<span class="">/</span>
+					<span>GIT & GITHUB</span> 
+					<span class="">/</span>
+					<span>HTML</span>
+					<span class="">/</span>
+					<span>CSS</span>
+					<span class="">/</span>
+					<span>JS</span>
+					<span class="">/</span>
+					<span>ALPHINE </span>
+					<span class="">/</span>
+					<span>TAILWIND</span> 
+					<span class="">/</span>
+					<span>ASTRO</span> 
+					<span class="">/</span>
+					<span>GIT & GITHUB</span> 
+					<span class="">/</span>
+					<span>HTML</span>
+					<span class="">/</span>
+					<span>CSS</span>
+					<span class="">/</span>
+					<span>JS</span>
+					<span class="">/</span>
+					<span>ALPHINE </span>
+					<span class="">/</span>
+					<span>TAILWIND</span> 
+					<span>ASTRO</span> 
+					<span class="">/</span>
+					<span>GIT & GITHUB</span> 
+					<span class="">/</span>
+				</span> 
+			</div> 
+		</div> 
+	</div>
+
+	<a href="/designsystem" class="flex">
+		<Button variant="filled">designsystem</Button>
+	</a>
+
 	<Button variant="filled">knapknapknapknap</Button>
 	<Button variant="stroke">knapknapknapknap</Button>
-
+	
+	<VinCard
+	title="Uhh god vin"
+	imageSrc="https://via.placeholder.com/150x450"
+	kraftig={3}
+	tor={4}
+	frisk={5}
+	description="Mmmm yum yum god vin"
+	notes="Gran, Bær og yum"
+  />
+  
+  <Accordion class="border-b-2 border-darkgrey" caption="heyyy"></Accordion>
 	
 	<section class="mt-lg">
 		<!-- TYPOGRAFI – DESKTOP -->
-		<h2 class="text-headline3 sm:text-headline3 font-semibold mb-sm">
+		<h2 class="text-headline2">
 		  TYPOGRAFI – DESKTOP
 		</h2>
 	  
 		<!-- Display Font -->
-		<h1 class="text-display sm:text-display font-caslon font-semibold mb-sm">
-		  Display Font Semibold
-		</h1>
-		<h1 class="text-display sm:text-display font-caslon font-semibold italic mb-md">
-		  Display Font Semibold Italic
-		</h1>
+		<h1 class="text-display sm:text-display-lg font-caslon font-semibold mb-sm">
+			Display Font Semibold
+		  </h1>
+		<h1 class="text-display sm:text-display-lg font-caslon font-semibold italic mb-sm">
+			Display Font Semibold Italic
+		  </h1>
 	  
 		<!-- Headline 1 -->
-		<h1 class="text-headline1 sm:text-headline1 font-caslon font-semibold mb-xs">
-		  Headline 1 Semibold
-		</h1>
-		<h1 class="text-headline1 sm:text-headline1 font-caslon font-semibold italic mb-sm">
-		  Headline 1 Semibold Italic
-		</h1>
-	  
+		<h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold mb-sm">
+			Headline 1 Semibold 
+		  </h1>
+		<h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm">
+			Headline 1 Semibold Italic
+		  </h1>
+
 		<!-- Headline 2 -->
-		<h2 class="text-headline2 sm:text-headline2 font-caslon font-semibold mb-xs">
-		  Headline 2 Semibold
-		</h2>
-		<h2 class="text-headline2 sm:text-headline2 font-caslon font-semibold italic mb-sm">
-		  Headline 2 Semibold Italic
-		</h2>
+		<h2 class="text-headline2 sm:text-headline2-lg font-caslon font-semibold mb-sm">
+			Headline 2 Semibold 
+		  </h2>
+		<h2 class="text-headline2 sm:text-headline2-lg font-caslon font-semibold italic mb-sm">
+			Headline 2 Semibold Italic
+		  </h2>
 	  
 		<!-- Headline 3 -->
-		<h3 class="text-headline3 sm:text-headline3 font-opensans font-regular mb-xs">
+		<h3 class="text-headline3 sm:text-headline3-lg font-opensans font-regular mb-xs">
 		  Headline 3 Regular
 		</h3>
-		<h3 class="text-headline3 sm:text-headline3 font-opensans font-bold mb-md">
+		<h3 class="text-headline3 sm:text-headline3-lg font-opensans font-bold mb-md">
 		  Headline 3 Bold
 		</h3>
 	  
 		<!-- Bodytekst -->
-		<p class="text-body sm:text-body font-opensans font-regular leading-relaxed mb-sm">
+		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
 		  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 		  incididunt ut labore et dolore magna aliqua.
 		</p>
-		<p class="text-body sm:text-body font-opensans font-bold leading-relaxed">
+		<p class="text-body sm:text-body-lg font-opensans font-bold leading-relaxed">
 		  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 		  incididunt ut labore et dolore magna aliqua.
 		</p>
