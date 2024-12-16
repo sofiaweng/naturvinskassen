@@ -18,22 +18,48 @@ import Mastercard from "../assets/images/mastercard.svg";
             <!-- med til at gøre boksen sticky -->
             <div class="md:sticky top-[10%] self-start">
                 <!-- skjul ordreoversigtbar -->
-                <div class="flex justify-between border-b lg:hidden  border-orange-500 p-xs">
+                <!-- <div id="oversigtsbar" class="flex justify-between border-b lg:hidden  border-orange-500 p-xs">
                     <div class="flex-row flex  ">
                         <p class="self-center">
                         Skjul ordreoversigt
                         </p>
-                        <div class="self-center relative w-xs h-10 flex items-center justify-center">
-                            <span class="absolute block w-full h-1 bg-green-500 transform rotate-45 ease-in"></span>
-                            <span class="absolute block w-full h-1 bg-green-500 transform -rotate-45 ease-in"></span>
+                        <div class="self-center relative w-6 h-6 flex items-center justify-center transition-transform duration-300">
+                            <span 
+                                class="absolute block w-full h-1 bg-green-500 transform rotate-0 peer-checked:rotate-45 transition-transform ease-in-out"></span>
+                            <span 
+                                class="absolute block w-full h-1 bg-green-500 transform rotate-90 peer-checked:-rotate-45 transition-transform ease-in-out"></span>
                         </div>
                     </div>
                     <p class="self-center">
                     450 DKK / md.
                     </p>
+            </div> -->
+                    <!-- Toggle bar -->
+        <label 
+        for="toggle-oversigt" 
+        id="oversigtsbar" 
+        class="flex justify-between border-b lg:hidden border-orange-500 p-xs cursor-pointer">
+        <div class="flex-row flex items-center gap-xs">
+            <p class="self-center peer-checked:hidden">Skjul ordreoversigt</p>
+            <p class="self-center hidden peer-checked:block">Vis ordreoversigt</p>
+            <!-- plusikon -->
+            <div class="self-center relative w-6 h-6 flex items-center justify-center transition-transform duration-300">
+                <span 
+                    class="absolute block w-full h-1 bg-green-500 transform rotate-0 peer-checked:rotate-45 transition-transform ease-in-out"></span>
+                <span 
+                    class="absolute block w-full h-1 bg-green-500 transform rotate-90 peer-checked:-rotate-45 transition-transform ease-in-out"></span>
             </div>
+        </div>
+        <p class="self-center">450 DKK / md.</p>
+    </label>
+
+    <!-- Hidden checkbox to manage state -->
+    <input 
+        type="checkbox" 
+        id="toggle-oversigt" 
+        class="peer hidden" />
                  <!-- selve ordreoversigten (indholdet) -->
-                <div class="p-xs lg:p-lg py-sm border-b lg:border-0 border-orange-500 grid gap-xs">
+                <div id="oversigtsindhold" class=" peer-checked:hidden transition-[max-height] duration-300 ease-in-out p-xs lg:p-lg py-sm border-b lg:border-0 border-orange-500 grid gap-xs">
                     <h1>Ordreoversigt</h1>
                     <div class="flex flex-row justify-between ">
                         <!-- ikon af kassen -->
