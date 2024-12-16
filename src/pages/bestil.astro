@@ -12,11 +12,85 @@ import Mastercard from "../assets/images/mastercard.svg";
     }
 </style>
 <MainLayout>
-    <article>
-        <section>
+    <article class="grid lg:grid-cols-2">
+        <section class="lg:order-1 bg-offwhite " >
+            <div class="flex justify-between border-b border-orange-500 p-xs">
+                <div class="flex-row flex ">
+                     <p class="self-center">
+                    Skjul ordreoversigt
+                    </p>
+                    <div class="self-center relative w-xs h-10 flex items-center justify-center">
+                        <span class="absolute block w-full h-1 bg-green-500 transform rotate-45 ease-in"></span>
+                        <span class="absolute block w-full h-1 bg-green-500 transform -rotate-45 ease-in"></span>
+                    </div>
+                </div>
+               <p class="self-center">
+                450 DKK / md.
+               </p>
+            </div>
+            <div class="p-xs">
+                <h1>Ordreoversigt</h1>
+                <div>
+                    <div>
+                    </div>
+                    <p>
+                        Naturvinskassen -
+                        <br>
+                        Månedlig abonnement
+                    </p>
+                    <p>
+                        450 DKK / md.
+                    </p>
+                </div>
+                <div>
+                    <div class="mb-5">
+                        <input 
+                            type="text"
+                            class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full  "
+                            placeholder="Rabatkode eller gavekort" />
+                      </div>
+                    <Button>Brug</Button>
+                </div>
+                <div>
+                    <div>
+                        <p>Subtotal</p>
+                        <p>450 DKK</p>
+                    </div>
+                    <div>
+                        <p>Levering</p>
+                        <p>Gratis</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>I alt</p>
+                        <span>Inklusiv 20 DKK i moms</span>
+                    </div>
+                    <p>
+                        450 DKK
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <form class=" p-xs">
             <article>
                 <h1>Kontaktoplysninger</h1>
-                <input type="text">
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#FF9C66" viewBox="0 0 20 16">
+                        <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                        <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                    </svg>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="email-address-icon" 
+                        class="bg-transparent border border-lightgrey text-darkgrey text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full ps-10 p-2.5" 
+                        placeholder="E-mail">
+                </div>
+
             </article>
             <article>
                 <h1>Levering</h1>  
@@ -27,7 +101,35 @@ import Mastercard from "../assets/images/mastercard.svg";
                     <label for="Støt én gang">Støt én gang</label>
                 </div>
                 <div>
-                    <input type="text">
+                    <form class="max-w-sm mx-auto">
+                        <label for="countries" class="block mb-2 text-sm font-medium text-darkgrey  ">Select your country</label>
+                        <select id="countries" class="bg-gray-50 border border-lightgrey text-darkgrey text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500">
+                      
+                          <option>Danmark</option>
+                          <option>Frankrig</option>
+                          <option>Tyskland</option>
+                          <option>Sverige</option>
+                        </select>
+                        <div class="flex flex-row">
+                            <div class="">
+                                <input 
+                                    type="text"
+                                    class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500  w-full  "
+                                    placeholder="Fornavn" />
+                            </div>
+                            <div class="">
+                                <input 
+                                    type="text"
+                                    class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500  w-full  "
+                                    placeholder="Efternavn" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <input 
+                                type="text"
+                                class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full  "
+                                placeholder="Rabatkode eller gavekort" />
+                        </div>
                 </div>
             </article>
             <article>
@@ -55,51 +157,37 @@ import Mastercard from "../assets/images/mastercard.svg";
             </article>
             <!-- betingelser -->
             <article>
-
+                <div class="flex items-center mb-4">
+                    <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-orange-500  bg-transparent border-lightgrey rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
+                    <label for="checkbox-1" class="ms-2 text-sm  text-darkgrey dark:text-gray-300">
+                        Jeg accepterer 
+                        <a href="#" class="underline">
+                            abonnements-betingelserne
+                        </a>
+                        <span class="text-orange-500">
+                            *
+                        </span>
+                    </label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-orange-500 bg-transparent border-lightgrey rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
+                    <label for="checkbox-1" class="ms-2 text-sm  text-darkgrey dark:text-gray-300">
+                        Jeg har læst og accepterer webshoppens 
+                        <a href="#" class="underline">
+                            Vilkår og betingelser
+                        </a>
+                        <span class="text-orange-500">
+                            *
+                        </span>
+                    </label>
+                </div>
+              
             </article>
             <a href="/tak">
                 <Button>Bestil nu</Button>
             </a>
-        </section>
-        <section>
-            <h1>Kurv</h1>
-            <div>
-                <div>
+        </form>
 
-                </div>
-                <p>
-                    Naturvinskassen -
-                    <br>
-                    Månedlig abonnement
-                </p>
-                <p>
-                    450 DKK / md.
-                </p>
-            </div>
-            <div>
-                <input class="w-full" type="text">
-                <Button>Brug</Button>
-            </div>
-            <div>
-                <div>
-                    <p>Subtotal</p>
-                    <p>450 DKK</p>
-                </div>
-                <div>
-                    <p>Levering</p>
-                    <p>Gratis</p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <p>I alt</p>
-                    <span>Inklusiv 20 DKK i moms</span>
-                </div>
-                <p>
-                    450 DKK
-                </p>
-            </div>
-        </section>
     </article>
 
 </MainLayout>
