@@ -1,0 +1,96 @@
+---
+export interface Props {
+  title: string; // Navnet på vin
+  imageSrc: string; // Billede
+  kraftig?: number; // Dots fyldte for 'Kraftig'
+  tor?: number; // Dots fyldte for 'Tør'
+  frisk?: number; // Dots fyldte for 'Frisk'
+  description?: string; // Wine forklaring (hover effekt)
+  notes?: string; // Smagsnoter (hover effekt)
+}
+
+const {
+  title = "Placeholder",
+  imageSrc = "",
+  kraftig = 0,
+  tor = 0,
+  frisk = 0,
+  description = "Beskrivelse",
+  notes = "Smagsnoter",
+} = Astro.props;
+
+// Function to create dot indicators
+const createDots = (filled: number, total = 5) => {
+  return Array.from({ length: total }, (_, i) => i < filled);
+};
+---
+
+<!-- Wine Titel -->
+<div class="text-orange-500 text-headline3 font-semibold">{title}</div>
+
+<div class="w-[343px] h-[450px] border border-orange-500">
+
+  <!-- Hoverable billede Container -->
+  <div class="group relative flex items-center justify-center h-[343px] border-b border-orange-500">
+    <!-- Billede -->
+    <img
+      src={imageSrc}
+      alt={title}
+      class="h-[273px] w-auto transition-all duration-300 group-hover:opacity-0"
+    />
+    <!-- Hover indhold -->
+    <div
+      class="absolute inset-0 bg-orange-500 text-white p-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center"
+    >
+      <p class="text-body mb-xs">{description}</p>
+      <p class="text-body font-bold">Smagsnoter:</p>
+      <p class="text-body">{notes}</p>
+    </div>
+  </div>
+
+  <!-- Vin karakteristika -->
+  <div class="p-xs text-body text-black">
+    <!-- Kraftig -->
+    <div class="flex items-center mb-xxs">
+      <span class="w-[70px]">Kraftig:</span>
+      <div class="flex gap-xxs">
+        {createDots(kraftig).map((filled, i) => (
+          <div
+            class={`w-3.5 h-3.5 rounded-full ${
+              filled ? "bg-orange-500" : "border border-orange-500"
+            }`}
+            key={i}
+          ></div>
+        ))}
+      </div>
+    </div>
+    <!-- Tør -->
+    <div class="flex items-center mb-xxs">
+      <span class="w-[70px]">Tør:</span>
+      <div class="flex gap-xxs">
+        {createDots(tor).map((filled, i) => (
+          <div
+            class={`w-3.5 h-3.5 rounded-full ${
+              filled ? "bg-orange-500" : "border border-orange-500"
+            }`}
+            key={i}
+          ></div>
+        ))}
+      </div>
+    </div>
+    <!-- Frisk -->
+    <div class="flex items-center">
+      <span class="w-[70px]">Frisk:</span>
+      <div class="flex gap-xxs">
+        {createDots(frisk).map((filled, i) => (
+          <div
+            class={`w-3.5 h-3.5 rounded-full ${
+              filled ? "bg-orange-500" : "border border-orange-500"
+            }`}
+            key={i}
+          ></div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
