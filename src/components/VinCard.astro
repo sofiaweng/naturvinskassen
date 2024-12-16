@@ -1,12 +1,12 @@
 ---
 export interface Props {
-  title: string; // Navnet på vin
+  title: string; // Vin navn
   imageSrc: string; // Billede
-  kraftig?: number; // Dots fyldte for 'Kraftig'
-  tor?: number; // Dots fyldte for 'Tør'
-  frisk?: number; // Dots fyldte for 'Frisk'
-  description?: string; // Wine forklaring (hover effekt)
-  notes?: string; // Smagsnoter (hover effekt)
+  kraftig?: number; // Dots for 'Kraftig'
+  tor?: number; // Dots for 'Tør'
+  frisk?: number; // Dots for 'Frisk'
+  description?: string; // Forklaring af vin
+  notes?: string; // Smagsnoter
 }
 
 const {
@@ -19,44 +19,46 @@ const {
   notes = "Smagsnoter",
 } = Astro.props;
 
-// Function to create dot indicators
 const createDots = (filled: number, total = 5) => {
   return Array.from({ length: total }, (_, i) => i < filled);
 };
 ---
 
-<!-- Wine Titel -->
-<div class="text-orange-500 text-headline3 font-semibold">{title}</div>
+  <!-- Navn på vin -->
+  <div class="text-orange-500 text-base font-semibold sm:text-headline3">
+    {title}
+  </div>
 
-<div class="w-[343px] h-[450px] border border-orange-500">
+    <!-- Vin Card -->
+    <div class="border border-orange-500 w-[277px] h-[340px] sm:w-[343px] sm:h-[430px]">
 
-  <!-- Hoverable billede Container -->
-  <div class="group relative flex items-center justify-center h-[343px] border-b border-orange-500">
+  <!-- Hoverable billede container -->
+  <div class="group relative flex items-center justify-center h-[276px] sm:h-[343px] border-b border-orange-500">
     <!-- Billede -->
     <img
       src={imageSrc}
       alt={title}
-      class="h-[273px] w-auto transition-all duration-300 group-hover:opacity-0"
+      class="h-[198px] w-auto sm:h-[273px] transition-all duration-300 group-hover:opacity-0"
     />
     <!-- Hover indhold -->
     <div
-      class="absolute inset-0 bg-orange-500 text-white p-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center"
+      class="absolute inset-0 bg-orange-500 text-white p-xs opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center sm:p-sm"
     >
-      <p class="text-body mb-xs">{description}</p>
-      <p class="text-body font-bold">Smagsnoter:</p>
-      <p class="text-body">{notes}</p>
+      <p class="text-xs mb-xxs sm:text-body sm:mb-xs">{description}</p>
+      <p class="text-xs font-bold sm:text-body">Smagsnoter:</p>
+      <p class="text-xs sm:text-body">{notes}</p>
     </div>
   </div>
 
   <!-- Vin karakteristika -->
-  <div class="p-xs text-body text-black">
+  <div class="p-xxs text-xs text-black sm:p-xs sm:text-body">
     <!-- Kraftig -->
     <div class="flex items-center mb-xxs">
-      <span class="w-[70px]">Kraftig:</span>
+      <span class="w-[55px] sm:w-[70px]">Kraftig:</span>
       <div class="flex gap-xxs">
         {createDots(kraftig).map((filled, i) => (
           <div
-            class={`w-3.5 h-3.5 rounded-full ${
+            class={`w-2 h-2 sm:w-3.5 sm:h-3.5 rounded-full ${
               filled ? "bg-orange-500" : "border border-orange-500"
             }`}
             key={i}
@@ -66,11 +68,11 @@ const createDots = (filled: number, total = 5) => {
     </div>
     <!-- Tør -->
     <div class="flex items-center mb-xxs">
-      <span class="w-[70px]">Tør:</span>
+      <span class="w-[55px] sm:w-[70px]">Tør:</span>
       <div class="flex gap-xxs">
         {createDots(tor).map((filled, i) => (
           <div
-            class={`w-3.5 h-3.5 rounded-full ${
+            class={`w-2 h-2 sm:w-3.5 sm:h-3.5 rounded-full ${
               filled ? "bg-orange-500" : "border border-orange-500"
             }`}
             key={i}
@@ -80,11 +82,11 @@ const createDots = (filled: number, total = 5) => {
     </div>
     <!-- Frisk -->
     <div class="flex items-center">
-      <span class="w-[70px]">Frisk:</span>
+      <span class="w-[55px] sm:w-[70px]">Frisk:</span>
       <div class="flex gap-xxs">
         {createDots(frisk).map((filled, i) => (
           <div
-            class={`w-3.5 h-3.5 rounded-full ${
+            class={`w-2 h-2 sm:w-3.5 sm:h-3.5 rounded-full ${
               filled ? "bg-orange-500" : "border border-orange-500"
             }`}
             key={i}
