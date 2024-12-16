@@ -19,7 +19,7 @@ export default {
           700: "#343E1E",
         },
         white: "#FFFFFF",
-        offwhite: "#F2F2F2",
+        offwhite: "#F9F7F1",
         lightgrey: "#C4C4C4",
         darkgrey: "#686563",
         black: "#000000",
@@ -70,7 +70,7 @@ export default {
         "display-lg": ["96px", { lineHeight: "auto" }], // Desktop
       
         headline1: ["32px", { lineHeight: "auto" }], // Mobile
-        "headline1-lg": ["64px", { lineHeight: "auto" }], // Desktop
+        "headline1-lg": ["64px", { lineHeight: "60px" }], // Desktop
       
         headline2: ["24px", { lineHeight: "auto" }], // Mobile
         "headline2-lg": ["40px", { lineHeight: "auto" }], // Desktop

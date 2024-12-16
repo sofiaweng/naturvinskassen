@@ -9,22 +9,37 @@ import Accordion from "../components/Accordion.astro";
 ---
 <MainLayout title="Naturvinskassen">
 
+	<!-- LANDING SEKTION -->
 	<div class="relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]">
   
 		<!-- Billeder (Mobile & Desktop) -->
-		<div class="absolute flex justify-center top-[110px] z-0 md:top-[93px] md:gap-[8px]">
+		<div class="absolute flex justify-center top-[110px] z-0 md:top-[100px] md:gap-xs">
 		  <!-- Left Image -->
 		  <img 
 			src="/src/assets/images/landing_1.webp" 
 			alt="Landing Image 1" 
-			class="w-[190px] h-auto ml-[40px] mb-[80px] md:w-[35%] md:h-auto md:ml-0 md:mb-[0px] md:mt-[7px]"
+			class="w-[190px] h-auto ml-[40px] mb-[80px] md:w-[35%] md:h-auto md:ml-0 md:mb-[0px] "
 		  />
 		  <!-- Right Image -->
 		  <img 
 			src="/src/assets/images/landing_2.webp" 
 			alt="Landing Image 2" 
-			class="w-[190px] h-auto mr-[40px] mt-[80px] md:w-[35%] md:h-auto md:mr-0 md:mt-[7px]"
+			class="w-[190px] h-auto mr-[40px] mt-[80px] md:w-[35%] md:h-auto md:mr-0 md:mt-[0px]"
 		  />
+		  		<!-- Wine Doodles (Left & Right for Desktop) -->
+			<div class="hidden md:flex flex-col gap-[20px] absolute left-0 h-[480px]">
+				<img src="/src/assets/images/vin1.svg" alt="Vin1" class="w-[33px] h-full object-contain">
+				<img src="/src/assets/images/vin2.svg" alt="Vin2" class="w-[33px] h-full object-contain">
+				<img src="/src/assets/images/vin3.svg" alt="Vin3" class="w-[27px] h-full object-contain">
+				<img src="/src/assets/images/vin4.svg" alt="Vin4" class="w-[24px] h-full object-contain">
+			</div>
+			<div class="hidden md:flex flex-col gap-[25px] absolute right-0 h-[480px]">
+				<img src="/src/assets/images/vin5.svg" alt="Vin5" class="w-[47px] h-full object-contain">
+				<img src="/src/assets/images/vin6.svg" alt="Vin6" class="w-[47px] h-full object-contain">
+				<img src="/src/assets/images/vin7.svg" alt="Vin7" class="w-[47px] h-full object-contain">
+				<img src="/src/assets/images/vin8.svg" alt="Vin8" class="w-[46px] h-full object-contain">
+			</div>
+		
 		</div>
 	  
 		<!-- Join The SVG (Mobile Only) -->
@@ -48,20 +63,7 @@ import Accordion from "../components/Accordion.astro";
 		  class="hidden md:block absolute left-1/2 -translate-x-1/2 max-w-[640px] z-10"
 		/>
 	  
-		<!-- Wine Doodles (Left & Right for Desktop) -->
-		<div class="hidden md:flex flex-col gap-[20px] absolute left-0 top-[90px] h-[480px]">
-		  <img src="/src/assets/images/vin1.svg" alt="Vin1" class="w-[33px] h-full object-contain">
-		  <img src="/src/assets/images/vin2.svg" alt="Vin2" class="w-[33px] h-full object-contain">
-		  <img src="/src/assets/images/vin3.svg" alt="Vin3" class="w-[27px] h-full object-contain">
-		  <img src="/src/assets/images/vin4.svg" alt="Vin4" class="w-[24px] h-full object-contain">
-		</div>
-		<div class="hidden md:flex flex-col gap-[25px] absolute right-0 top-[90px] h-[480px]">
-		  <img src="/src/assets/images/vin5.svg" alt="Vin5" class="w-[47px] h-full object-contain">
-		  <img src="/src/assets/images/vin6.svg" alt="Vin6" class="w-[47px] h-full object-contain">
-		  <img src="/src/assets/images/vin7.svg" alt="Vin7" class="w-[47px] h-full object-contain">
-		  <img src="/src/assets/images/vin8.svg" alt="Vin8" class="w-[46px] h-full object-contain">
-		</div>
-	  
+
 		<!-- Forklarende tekst -->
 		<div class="absolute bottom-[120px] text-left px-xs w-full md:bottom-[100px] md:text-center md:w-[685px] md:mx-auto">
 		  <h3 class="text-body font-opensans leading-relaxed md:text-headline3">
@@ -77,5 +79,45 @@ import Accordion from "../components/Accordion.astro";
 		</div>
 	  </div>
 	  
+<!-- HVAD ER NATURVIN SECTION -->
+<div class="relative w-full bg-offwhite pb-ml">
+	<!-- Grid Container for Desktop -->
+	<div class="md:grid md:grid-cols-2 md:gap-ml md:p-2xl md:items-start">
+	  <!-- Left Column: Images Section -->
+	  <div class="flex flex-col md:gap-ml ">
+		<!-- Top Image -->
+		<img 
+		  src="/src/assets/images/hvad_er_naturvin1.webp" 
+		  alt="Mand der hælder vin op" 
+		  class="w-full h-[350px] object-cover md:h-auto md:w-full"
+		/>
+		<!-- Bottom Image -->
+		<img 
+		  src="/src/assets/images/hvad_er_naturvin1.webp" 
+		  alt="image 2" 
+		  class="w-full h-[350px] object-cover md:h-auto md:w-full"
+		/>
+	  </div>
+  
+	  <!-- Right Column: Text Section with Parallax -->
+	  <div class="mt-ml px-xs md:sticky md:top-[20%] md:self-start">
+		<!-- Headline -->
+		<h2 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+		  Hvad er naturvin?
+		</h2>
+		<!-- Body Text -->
+		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+		  Naturvin lader naturen tale – fremstillet uden tilsætningsstoffer, kunstig gær eller kemi. Druerne dyrkes økologisk, 
+		  og produktionen sker med minimal indgriben, hvilket gør hver flaske unik og levende.<br/><br/>
+		  I modsætning til almindelig vin, der ofte standardiseres med tilsætningsstoffer, er naturvin ufiltreret og uforudsigelig. 
+		  Smagen varierer og er ofte mere kompleks, skabt i små partier af passionerede vinbønder med fokus på bæredygtighed.
+		</p>
+	  </div>
+	</div>
+  </div>
+  
+  
+
+	
 	  
 </MainLayout>
