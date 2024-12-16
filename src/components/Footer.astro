@@ -1,6 +1,48 @@
 ---
+import { Image } from 'astro:assets';
+import Visa from "../assets/images/visa.svg";
+import Mastercard from "../assets/images/mastercard.svg";
+import Facebook from "../assets/images/facebook.svg";
+import Instagram from "../assets/images/instagram.svg";
+import Twitter from "../assets/images/Twitter.svg";
 ---
-<div>
-    <p class="max-w-screen-xl mx-auto text-white">Footer - tilføj footerindhold</p>
-</div>
-      
+<article class="flex justify-between p-xs py-sm">
+    <div class="grid gap-xs lg:flex lg:flex-row-reverse lg:gap-m ">
+        <div>
+            <p class="text-orange-500">Naturvinskassen</p>
+            <p>Borggade 16 8000, århus C</p>
+            <div class=" gap-xs pt-xs hidden lg:flex">
+                <Image class='w-[7%]' src={Facebook} alt="facebook logo"></Image>    
+                <Image class='w-[14%]'  src={Instagram} alt="ig logo"></Image>    
+                <Image class='w-[14%]' src={Twitter} alt="x logo"></Image>    
+            </div>
+        </div>
+        <div>
+            <p class="text-orange-500">Kontakt</p>
+            <p>
+                +45 40 38 40 12
+                <br>
+                info@reduktivt.com
+                <br>
+                CVR: 39843978
+            </p>
+        </div>
+        
+    </div>
+    <div class="grid gap-xs lg:flex">
+        <div class="flex gap-xs justify-end lg:hidden">
+            <Image class='w-[8%]' src={Facebook} alt="facebook logo"></Image>    
+            <Image class='w-[16%]'  src={Instagram} alt="ig logo"></Image>    
+            <Image class='w-[16%]' src={Twitter} alt="x logo"></Image>    
+        </div>
+        <div class="flex-col flex text-right underline lg:justify-center">
+            <a href="">Privatlivspolitik</a>
+            <a href="">Handelsbetingelser</a>
+            <a href="">Abonnementsbetingelser</a>
+        </div>
+        <div class="flex gap-xxs justify-end lg:justify-center lg:flex-col">
+            <Image class='w-[30%] lg:w-m' src={Visa} alt="visa logo"></Image>    
+            <Image class='w-[30%] lg:w-m' src={Mastercard} alt="visa logo"></Image>    
+        </div>
+    </div>
+</article>
