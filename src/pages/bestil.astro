@@ -1,5 +1,105 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+import Visa from "../assets/images/visa.svg";
+import Mastercard from "../assets/images/mastercard.svg";
 ---
-<MainLayout></MainLayout>
+<style>
+    h1{
+        @apply italic;
+        @apply text-orange-500
+    }
+</style>
+<MainLayout>
+    <article>
+        <section>
+            <article>
+                <h1>Kontaktoplysninger</h1>
+                <input type="text">
+            </article>
+            <article>
+                <h1>Levering</h1>  
+                <div> 
+                    <input type="radio" class="py-1 my-2 hover:bg-orange-500 focus:bg-orange-500 focus:ring-orange-500 checked:bg-orange-500 checked:ring-orange-500" id="month" name="support">
+                    <label for="Støt månedlig">Privat levering</label>
+                    <input type="radio" class="py-1 ml-5 my-2  focus:bg-customDarkGreen focus:ring-customDarkGreen checked:bg-customDarkGreen checked:ring-customDarkGreen" id="ones" name="support">	
+                    <label for="Støt én gang">Støt én gang</label>
+                </div>
+                <div>
+                    <input type="text">
+                </div>
+            </article>
+            <article>
+                <h1>Betaling</h1>  
+                <div>
+                    <div class="flex justify-between">
+                        <div>
+                            <input type="radio" class="py-1 my-2 bg-orange-500  ring-orange-500 checked:bg-orange-500 checked:ring-orange-500" id="kredit" name="betaling">
+                            <label for="Støt én gang">Kreditkort</label>
+                        </div>
+                        <div class="flex gap-xxs justify-end lg:justify-center lg:flex-col">
+                            <Image class='w-[30%] lg:w-m' src={Visa} alt="visa logo"></Image>    
+                            <Image class='w-[30%] lg:w-m' src={Mastercard} alt="visa logo"></Image>    
+                        </div>
+                    </div>
+                    <div class="bg-offwhite">
+                        <input class="w-full" type="text">
+                        <div class="flex justify-between">
+                            <input  class="w-full" type="text">
+                            <input  class="w-full" type="text">
+                        </div>
+                        <input class="w-full"  type="text">
+                    </div>
+                </div>
+            </article>
+            <!-- betingelser -->
+            <article>
+
+            </article>
+            <a href="/tak">
+                <Button>Bestil nu</Button>
+            </a>
+        </section>
+        <section>
+            <h1>Kurv</h1>
+            <div>
+                <div>
+
+                </div>
+                <p>
+                    Naturvinskassen -
+                    <br>
+                    Månedlig abonnement
+                </p>
+                <p>
+                    450 DKK / md.
+                </p>
+            </div>
+            <div>
+                <input class="w-full" type="text">
+                <Button>Brug</Button>
+            </div>
+            <div>
+                <div>
+                    <p>Subtotal</p>
+                    <p>450 DKK</p>
+                </div>
+                <div>
+                    <p>Levering</p>
+                    <p>Gratis</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>I alt</p>
+                    <span>Inklusiv 20 DKK i moms</span>
+                </div>
+                <p>
+                    450 DKK
+                </p>
+            </div>
+        </section>
+    </article>
+
+</MainLayout>
