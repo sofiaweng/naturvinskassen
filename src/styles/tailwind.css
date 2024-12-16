@@ -2,8 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    /* p{
-        @apply text-body;
-    } */
+@layer base {
+  /* ------ css reset ------ */
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h1,
+  h2 {
+    @apply font-caslon font-semibold;
+  }
+  h1 {
+    @apply text-headline1;
+    @apply sm:text-headline1;
+  }
+  h2 {
+    @apply text-headline2;
+    @apply sm:text-headline2;
+  }
+  h3 {
+    @apply font-opensans;
+    @apply text-headline3;
+    @apply sm:text-headline3;
+  }
+
+  p {
+    @apply text-body;
+    @apply font-opensans;
+    @apply font-regular;
+  }
 }
