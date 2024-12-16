@@ -26,7 +26,7 @@ export default {
       },
 
       spacing: {
-        xxs: "5px",
+        xxs: "4px",
         xs: "16px",
         s: "22px",
         "15": "15px", // Ny værdi
@@ -48,7 +48,7 @@ export default {
 
       borderRadius: {
         mobile: "8px",
-        desktop: "15px",
+        desktop: "16px",
         md: "12px",
         lg: "20px",
       },
