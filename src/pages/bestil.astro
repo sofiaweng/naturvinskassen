@@ -12,71 +12,83 @@ import Mastercard from "../assets/images/mastercard.svg";
     }
 </style>
 <MainLayout>
-    <article class="grid lg:grid-cols-2">
-        <section class="lg:order-1 bg-offwhite " >
-            <div class="flex justify-between border-b lg:hidden  border-orange-500 p-xs">
-                <div class="flex-row flex  ">
-                     <p class="self-center">
-                    Skjul ordreoversigt
-                    </p>
-                    <div class="self-center relative w-xs h-10 flex items-center justify-center">
-                        <span class="absolute block w-full h-1 bg-green-500 transform rotate-45 ease-in"></span>
-                        <span class="absolute block w-full h-1 bg-green-500 transform -rotate-45 ease-in"></span>
+    <article class="grid lg:grid-cols-2 relative">
+        <!-- ordreoversigt -->
+        <section class="lg:order-1 bg-offwhite  " >
+            <!-- med til at gøre boksen sticky -->
+            <div class="md:sticky top-[10%] self-start">
+                <!-- skjul ordreoversigtbar -->
+                <div class="flex justify-between border-b lg:hidden  border-orange-500 p-xs">
+                    <div class="flex-row flex  ">
+                        <p class="self-center">
+                        Skjul ordreoversigt
+                        </p>
+                        <div class="self-center relative w-xs h-10 flex items-center justify-center">
+                            <span class="absolute block w-full h-1 bg-green-500 transform rotate-45 ease-in"></span>
+                            <span class="absolute block w-full h-1 bg-green-500 transform -rotate-45 ease-in"></span>
+                        </div>
                     </div>
-                </div>
-               <p class="self-center">
-                450 DKK / md.
-               </p>
+                    <p class="self-center">
+                    450 DKK / md.
+                    </p>
             </div>
-            <div class="p-xs lg:p-lg py-sm border-b lg:border-0 border-orange-500 grid gap-xs">
-                <h1>Ordreoversigt</h1>
-                <div class="flex flex-row justify-between ">
-                    <div>
-                    </div>
-                    <p>
-                        Naturvinskassen -
-                        <br>
-                        Månedlig abonnement
-                    </p>
-                    <p>
-                        450 DKK / md.
-                    </p>
-                </div>
-                <div>
-                    <div class="mb-xxs">
-                        <input 
-                            type="text"
-                            class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500 block w-full  "
-                            placeholder="Rabatkode eller gavekort" />
-                      </div>
-                      <div class="flex justify-end">
-                        <Button>Brug</Button>
-                      </div>
-                    
-                </div>
-                <div class="grid gap-xs">
-                    <div class="grid gap-xxs">
-                        <div class="flex flex-row justify-between">
-                            <p>Subtotal</p>
-                            <p>450 DKK</p>
+                 <!-- selve ordreoversigten (indholdet) -->
+                <div class="p-xs lg:p-lg py-sm border-b lg:border-0 border-orange-500 grid gap-xs">
+                    <h1>Ordreoversigt</h1>
+                    <div class="flex flex-row justify-between ">
+                        <!-- ikon af kassen -->
+                        <div>
                         </div>
-                        <div class="flex flex-row justify-between">
-                            <p>Levering</p>
-                            <p>Gratis</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-row justify-between">
-                        <div class="grid ">
-                            <h3 class="font-semibold">I alt</h3>
-                            <span class="text-xs">Inklusiv 20 DKK i moms</span>
-                        </div>
+                        <!-- beskrivelse -->
                         <p>
-                            450 DKK
+                            Naturvinskassen -
+                            <br>
+                            Månedlig abonnement
+                        </p>
+                        <p>
+                            450 DKK / md.
                         </p>
                     </div>
+                    <!-- rabat -->
+                    <div>
+                        <div class="mb-xxs">
+                            <input 
+                                type="text"
+                                class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500 block w-full  "
+                                placeholder="Rabatkode eller gavekort" />
+                        </div>
+
+                        <div class="flex justify-end">
+                            <Button>Brug</Button>
+                        </div>  
+                    </div>
+                    <!-- pris subtotal, levering og alt -->
+                    <div class="grid gap-xs">
+                        <!-- pris subtotal og levering  -->
+                        <div class="grid gap-xxs">
+                            <div class="flex flex-row justify-between">
+                                <p>Subtotal</p>
+                                <p>450 DKK</p>
+                            </div>
+                            <div class="flex flex-row justify-between">
+                                <p>Levering</p>
+                                <p>Gratis</p>
+                            </div>
+                        </div>
+                        <!-- ialt pris -->
+                        <div class="flex flex-row justify-between">
+                            <div class="grid ">
+                                <h3 class="font-semibold">I alt</h3>
+                                <span class="text-xs">Inklusiv 20 DKK i moms</span>
+                            </div>
+                                <p>
+                                450 DKK
+                                </p>
+                        </div>
+                    </div>
                 </div>
-               
             </div>
+
         </section>
 
 
