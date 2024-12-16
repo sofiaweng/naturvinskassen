@@ -2,4 +2,74 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 ---
-<MainLayout></MainLayout>
+<MainLayout>
+    <section class="max-w-[1000px] md:h-[95vh] mx-auto md:flex md:flex-row ">
+        <article class="self-center  md:order-2 p-xs py-sm">
+            <h1 class="text-orange-500 italic">Tak for din bestilling!</h1>
+            <p class="pb-xs">
+                Lige om lidt vil du få en ordrebekræftelse sendt til dinmail@email.com. 
+                Vi glæder os til du får pakken. Kan du ikke vente? 
+                Har vi også strakslevering, som du kan tilføje her
+            </p>
+            <Button variant="stroke">Vis ordrebekræftelse </Button>
+        </article>
+        <section class="h-[80vh] md:h-full md:w-full  flex ">
+            <article class="mx-auto aspect-544/825 kasse self-center justify-center bg-contain bg-no-repeat">
+            </article>
+             </section>
+    </section>
+
+</MainLayout>
+<style>
+        @keyframes kasse_kf {
+        0% {
+            background-image: url(/kasse1.svg);
+        }
+        8% {
+            background-image: url(/kasse2.svg);
+        }
+
+        16% {
+            background-image: url(/kasse3.svg);
+        }
+
+        24% {
+            background-image: url(/kasse4.svg);
+        }
+
+        32% {
+            background-image: url(/kasse5.svg);
+        }
+        40% {
+            background-image: url(/kasse6.svg);
+        }
+        48% {
+            background-image: url(/kasse7.svg);
+        }
+        56% {
+            background-image: url(/kasse8.svg);
+        }
+        64% {
+            background-image: url(/kasse9.svg);
+        }
+        72% {
+            background-image: url(/kasse10.svg);
+        }
+        85% {
+            background-image: url(/kasse11.svg);
+        }
+        100% {
+            background-image: url(/kasse12.svg);
+        }
+        }
+
+        .kasse {
+            height: 80%;
+            width: 80%;
+        animation-name: kasse_kf;
+        animation-timing-function: step-end;
+        animation-duration: 8s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        }
+</style>
