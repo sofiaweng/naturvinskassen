@@ -39,6 +39,7 @@
     @apply font-opensans;
     @apply font-regular;
   }
+
   @keyframes scroll {
     0% {
       transform: translate(0);
@@ -49,9 +50,22 @@
     }
   }
   .animate-scroll {
-    animation: scroll 10s linear infinite;
+    animation: scroll 60s linear infinite;
     animation-fill-mode: forwards;
   }
 
-  
+  @keyframes scroll-reverse {
+    0% {
+      transform: translate(-35%);
+    }
+
+    to {
+      transform: translate(0);
+    }
+  }
+
+  .animate-scroll-reverse {
+    animation: scroll-reverse 60s linear infinite;
+    animation-fill-mode: forwards;
+  }
 }

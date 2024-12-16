@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from 'astro:assets';
 import VinCard from "../components/VinCard.astro";
+import MadVin from '../components/MadVin.astro';
 
 import LandingImage1 from "../assets/images/landing_1.webp";
 import LandingImage2 from "../assets/images/landing_2.webp";
@@ -141,9 +142,56 @@ import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
 	  />
 	</div>
   </div>
-  
-  
-  
+
+
+
+
+<!-- MAD & VIN SEKTION -->
+<div class="mt-[200px]">
+	<MadVin direction="normal" />
+	<MadVin direction="reverse" />
+	<MadVin direction="normal" />
+	<MadVin direction="reverse" />
+
+	<div data-aos="fade-up"
+	 class="mt-ml mx-s gap-sm grid grid-cols-2 md:mt-xl md:mx-2xl md:gap-ml">
+		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+			Hos Naturvinskassen handler det ikke kun om vin – det handler om hele oplevelsen. Hver måned får du opskrifter, der passer perfekt til vinene i kassen, og skaber en smagsrejse, hvor mad og vin går op i en højere enhed.
+		  </p>
+		  <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+			Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
+		  </p>
+	</div>
+</div>
+
+
+
+  <!-- HVEM ER VI SEKTION -->
+  <div class="mt-2xl relative w-full bg-offwhite">
+    <!-- Grid Container -->
+    <div class="md:grid md:grid-cols-2 md:gap-ml md:p-2xl md:items-start">
+
+      <!-- Text Section -->
+      <div class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
+        <h2 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+			Hvem er vi?
+        </h2>
+        <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+			Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog pjalterne sammen i Århus, til fælles kamp for udbredelsen af naturvin. Sammen  startede vi Reduktivt, som er vores naturvinsbutik og importfirma, i hjertet af Århus. Herfra  servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange af  landet bedste restauranter.</p>
+		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+			Men herfra opstod også ideen til Naturvinskassen. Vores lille  abonnements-hjertebarn, som med tiden har vokset sig til et  selvstændigt, nysgerrigt og evigt tørstigt væsen. Altid på jagt efter  nye oplevelser.</p>
+		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+			Til glæde for alle vores medlemmer, selvfølgelig.</p>
+		
+		<Button variant="stroke">Vores mission</Button>
+      </div>
+	        <!-- Images -->
+			<div class="flex flex-col md:gap-ml">
+				<Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
+				<Image src={HvadErNaturvin1} alt="Billede af vin" class="w-full h-[350px] object-cover md:h-auto" />
+			  </div>
+    </div>
+  </div>
   
 
 </MainLayout>
