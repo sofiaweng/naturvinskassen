@@ -1,123 +1,129 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
 import VinCard from "../components/VinCard.astro";
-import Accordion from "../components/Accordion.astro";
+
+import LandingImage1 from "../assets/images/landing_1.webp";
+import LandingImage2 from "../assets/images/landing_2.webp";
+import Vin1 from "../assets/images/vin1.svg";
+import Vin2 from "../assets/images/vin2.svg";
+import Vin3 from "../assets/images/vin3.svg";
+import Vin4 from "../assets/images/vin4.svg";
+import Vin5 from "../assets/images/vin5.svg";
+import Vin6 from "../assets/images/vin6.svg";
+import Vin7 from "../assets/images/vin7.svg";
+import Vin8 from "../assets/images/vin8.svg";
+import MobilJoinThe from "../assets/images/mobil_join_the.svg";
+import MobilClub from "../assets/images/mobil_club.svg";
+import DesktopJoinTheClub from "../assets/images/desktop_join_the_club.svg";
+import HvadErNaturvin1 from "../assets/images/hvad_er_naturvin1.webp";
 ---
+
 <MainLayout title="Naturvinskassen">
+  <!-- LANDING SEKTION -->
+  <div class="relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]">
+    <!-- Images -->
+    <div class="absolute flex justify-center top-[110px] z-0 md:top-[100px] md:gap-xs">
+      <!-- Left and Right Images -->
+      <Image src={LandingImage1} alt="Landing Image 1" class="w-[190px] h-auto ml-[40px] mb-[80px] md:w-[35%] md:ml-0 md:mb-0" />
+      <Image src={LandingImage2} alt="Landing Image 2" class="w-[190px] h-auto mr-[40px] mt-[80px] md:w-[35%] md:mr-0 md:mt-0" />
+    </div>
 
-	<!-- LANDING SEKTION -->
-	<div class="relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]">
-  
-		<!-- Billeder (Mobile & Desktop) -->
-		<div class="absolute flex justify-center top-[110px] z-0 md:top-[100px] md:gap-xs">
-		  <!-- Left Image -->
-		  <img 
-			src="/src/assets/images/landing_1.webp" 
-			alt="Landing Image 1" 
-			class="w-[190px] h-auto ml-[40px] mb-[80px] md:w-[35%] md:h-auto md:ml-0 md:mb-[0px] "
-		  />
-		  <!-- Right Image -->
-		  <img 
-			src="/src/assets/images/landing_2.webp" 
-			alt="Landing Image 2" 
-			class="w-[190px] h-auto mr-[40px] mt-[80px] md:w-[35%] md:h-auto md:mr-0 md:mt-[0px]"
-		  />
-		  		<!-- Wine Doodles (Left & Right for Desktop) -->
-			<div class="hidden md:flex flex-col gap-[20px] absolute left-0 h-[480px]">
-				<img src="/src/assets/images/vin1.svg" alt="Vin1" class="w-[33px] h-full object-contain">
-				<img src="/src/assets/images/vin2.svg" alt="Vin2" class="w-[33px] h-full object-contain">
-				<img src="/src/assets/images/vin3.svg" alt="Vin3" class="w-[27px] h-full object-contain">
-				<img src="/src/assets/images/vin4.svg" alt="Vin4" class="w-[24px] h-full object-contain">
-			</div>
-			<div class="hidden md:flex flex-col gap-[25px] absolute right-0 h-[480px]">
-				<img src="/src/assets/images/vin5.svg" alt="Vin5" class="w-[47px] h-full object-contain">
-				<img src="/src/assets/images/vin6.svg" alt="Vin6" class="w-[47px] h-full object-contain">
-				<img src="/src/assets/images/vin7.svg" alt="Vin7" class="w-[47px] h-full object-contain">
-				<img src="/src/assets/images/vin8.svg" alt="Vin8" class="w-[46px] h-full object-contain">
-			</div>
-		
-		</div>
-	  
-		<!-- Join The SVG (Mobile Only) -->
-		<img 
-		  src="/src/assets/images/mobil_join_the.svg" 
-		  alt="Join The" 
-		  class="w-[70%] max-w-[337px] absolute top-[20px] left-1/2 -translate-x-1/2 z-10 block md:hidden" 
-		/>
-	  
-		<!-- Club! SVG (Mobile Only) -->
-		<img 
-		  src="/src/assets/images/mobil_club.svg" 
-		  alt="Club!" 
-		  class="w-[50%] max-w-[215px] absolute top-[430px] left-1/2 -translate-x-1/2 z-10 block md:hidden"
-		/>
-	  
-		<!-- Desktop: Join The Club Unified SVG -->
-		<img 
-		  src="/src/assets/images/desktop_join_the_club.svg" 
-		  alt="Join The Club!" 
-		  class="hidden md:block absolute left-1/2 -translate-x-1/2 max-w-[640px] z-10"
-		/>
-	  
+    <!-- Desktop Wine Doodles -->
+    <div class="hidden md:flex flex-col gap-[20px] absolute left-0 h-[480px]">
+      <Image src={Vin1} alt="Vin1" class="w-[33px] h-full object-contain" />
+      <Image src={Vin2} alt="Vin2" class="w-[33px] h-full object-contain" />
+      <Image src={Vin3} alt="Vin3" class="w-[27px] h-full object-contain" />
+      <Image src={Vin4} alt="Vin4" class="w-[24px] h-full object-contain" />
+    </div>
+    <div class="hidden md:flex flex-col gap-[25px] absolute right-0 h-[480px]">
+      <Image src={Vin5} alt="Vin5" class="w-[47px] h-full object-contain" />
+      <Image src={Vin6} alt="Vin6" class="w-[47px] h-full object-contain" />
+      <Image src={Vin7} alt="Vin7" class="w-[47px] h-full object-contain" />
+      <Image src={Vin8} alt="Vin8" class="w-[46px] h-full object-contain" />
+    </div>
 
-		<!-- Forklarende tekst -->
-		<div class="absolute bottom-[120px] text-left px-xs w-full md:bottom-[100px] md:text-center md:w-[685px] md:mx-auto">
-		  <h3 class="text-body font-opensans leading-relaxed md:text-headline3">
-			Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
-			udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
-			måned efter måned.
-		  </h3>
-		</div>
-	  
-		<!-- Knap (Mobile & Desktop) -->
-		<div class="absolute bottom-[60px] right-0 pr-xs md:pr-0 md:text-right md:bottom-[30px]">
-		  <Button variant="stroke">Læs mere her!</Button>
-		</div>
-	  </div>
-	  
-<!-- HVAD ER NATURVIN SECTION -->
-<div class="relative w-full bg-offwhite pb-ml">
-	<!-- Grid Container for Desktop -->
-	<div class="md:grid md:grid-cols-2 md:gap-ml md:p-2xl md:items-start">
-	  <!-- Left Column: Images Section -->
-	  <div class="flex flex-col md:gap-ml ">
-		<!-- Top Image -->
-		<img 
-		  src="/src/assets/images/hvad_er_naturvin1.webp" 
-		  alt="Mand der hælder vin op" 
-		  class="w-full h-[350px] object-cover md:h-auto md:w-full"
-		/>
-		<!-- Bottom Image -->
-		<img 
-		  src="/src/assets/images/hvad_er_naturvin1.webp" 
-		  alt="image 2" 
-		  class="w-full h-[350px] object-cover md:h-auto md:w-full"
-		/>
-	  </div>
-  
-	  <!-- Right Column: Text Section with Parallax -->
-	  <div class="mt-ml px-xs md:sticky md:top-[20%] md:self-start">
-		<!-- Headline -->
-		<h2 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
-		  Hvad er naturvin?
-		</h2>
-		<!-- Body Text -->
-		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-		  Naturvin lader naturen tale – fremstillet uden tilsætningsstoffer, kunstig gær eller kemi. Druerne dyrkes økologisk, 
-		  og produktionen sker med minimal indgriben, hvilket gør hver flaske unik og levende.<br/><br/>
-		  I modsætning til almindelig vin, der ofte standardiseres med tilsætningsstoffer, er naturvin ufiltreret og uforudsigelig. 
-		  Smagen varierer og er ofte mere kompleks, skabt i små partier af passionerede vinbønder med fokus på bæredygtighed.
-		</p>
-	  </div>
-	</div>
+    <!-- Mobile SVGs -->
+    <Image src={MobilJoinThe} alt="Join The" class="w-[70%] max-w-[337px] absolute top-[20px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
+    <Image src={MobilClub} alt="Club!" class="w-[50%] max-w-[215px] absolute top-[430px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
+
+    <!-- Desktop SVG -->
+    <Image src={DesktopJoinTheClub} alt="Join The Club!" class="hidden md:block absolute left-1/2 -translate-x-1/2 max-w-[640px] z-10" />
+
+    <!-- Text Section -->
+    <div class="absolute bottom-[120px] text-left px-xs w-full md:bottom-[100px] md:text-center md:w-[685px] md:mx-auto">
+      <h3 class="text-body font-opensans leading-relaxed md:text-headline3">
+        Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
+        udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
+        måned efter måned.
+      </h3>
+    </div>
+
+    <!-- Button -->
+    <div class="absolute bottom-[60px] right-0 pr-xs md:pr-0 md:text-right md:bottom-[30px]">
+      <Button variant="stroke">Læs mere her!</Button>
+    </div>
   </div>
-  
-  
 
-	
-	  
+  <!-- HVAD ER NATURVIN SEKTION -->
+  <div class="relative w-full bg-offwhite pb-ml">
+    <!-- Grid Container -->
+    <div class="md:grid md:grid-cols-2 md:gap-ml md:p-2xl md:items-start">
+      <!-- Images -->
+      <div class="flex flex-col md:gap-ml">
+        <Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
+        <Image src={HvadErNaturvin1} alt="Billede af vin" class="w-full h-[350px] object-cover md:h-auto" />
+      </div>
+
+      <!-- Text Section -->
+      <div class="mt-ml px-xs md:sticky md:top-[20%] md:self-start">
+        <h2 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+          Hvad er naturvin?
+        </h2>
+        <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+          Naturvin lader naturen tale – fremstillet uden tilsætningsstoffer, kunstig gær eller kemi. Druerne dyrkes økologisk, 
+          og produktionen sker med minimal indgriben, hvilket gør hver flaske unik og levende.<br /><br />
+          I modsætning til almindelig vin, der ofte standardiseres med tilsætningsstoffer, er naturvin ufiltreret og uforudsigelig. 
+          Smagen varierer og er ofte mere kompleks, skabt i små partier af passionerede vinbønder med fokus på bæredygtighed.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MÅNEDENS VINE SEKTION -->
+   <div class="">
+		<div>
+			<h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+				Se denne måneds vine
+			</h1>
+		</div>
+	<VinCard
+	title="2023, Juste le Rouge"
+	imageSrc="https://via.placeholder.com/150x450"
+	kraftig={3}
+	tor={4}
+	frisk={5}
+	description="En let og levende rødvin fra Loire-dalen i Frankrig, fremstillet på Gamay-druer. Denne vin er et klassisk eksempel på naturvinens friske og ufiltrerede stil. Perfekt til lette retter eller som en aperitif."
+	notes="Røde bær som hindbær og jordbær, en snert af viol og en let krydret eftersmag. Frisk og sprød med en saftig syre."
+	/>
+	<VinCard
+	title="2022, Gavel Sauvignon"
+	imageSrc="https://via.placeholder.com/150x450"
+	kraftig={2}
+	tor={5}
+	frisk={4}
+	description="En aromatisk og struktureret hvidvin fra Steiermark i Østrig, fremstillet på Sauvignon Blanc. Denne vin er gæret med naturlig gær og lagret kortvarigt på ståltanke for at bevare sin friskhed og mineralske karakter."
+	notes="Stikkelsbær, grøn peber og et hint af grapefrugt. En elegant mineralitet og frisk syre gør den ideel til salater og fiskeretter."
+	/>
+	<VinCard
+	title="2021, Terra Ambra"
+	imageSrc="https://via.placeholder.com/150x450"
+	kraftig={4}
+	tor={4}
+	frisk={3}
+	description="En unik orangevin fra Friuli, Italien, fremstillet på Friulano-druer. Druerne gærer med skallerne i fire uger, hvilket giver vinen sin ravfarvede tone og tanninstruktur."
+	notes="Abrikoser, appelsinskal og et strejf af mandler. Fyldig og tekstureret med en let tanninstruktur, der gør den perfekt til krydrede retter eller fede oste."
+	/>
+   </div>
 </MainLayout>
