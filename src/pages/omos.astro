@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+import RasmusOgMichael from "../assets/images/rasmusogmichael.png";
+import Medarbejdere from "../assets/images/medarbejdere.png";
+import Vinglas1 from "../assets/images/vinglas1.svg";
+import VinFlaskeLeft from "../assets/images/vinflaskeleft.svg";
+import Vinglas2 from "../assets/images/vinglas2.svg";
+import VinFlaskeRight from "../assets/images/vinflaskeright.svg";
+import Vinglas3 from "../assets/images/vinglas3.svg";
+import Om from "../assets/images/om.svg";
+import Os from "../assets/images/os.svg";
+---
+<MainLayout>
+<article class=" relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto py-8xl">
+    <div class=" absolute flex flex-row gap-m">
+        <Image src={Om} alt=""></Image>
+        <Image class="pt-6xl md:pt-0" src={Os} alt=""></Image>
+    </div>
+    <div class="">
+        <Image class="w-2/3 md:w-full" src={RasmusOgMichael} alt=""></Image>
+    </div>
+    <div class="self-center">
+       <div class="flex flex-row justify-between ">
+            <Image class="aspect-[73/138] w-1/6" src={Vinglas1} alt=""></Image>
+            <Image class="aspect-[73/138] w-1/6" src={VinFlaskeLeft} alt=""></Image>
+            <Image class="aspect-[73/138] w-1/6" src={Vinglas2} alt=""></Image>
+            <Image class="aspect-[73/138] w-1/6" src={VinFlaskeRight} alt=""></Image>
+            <Image class="aspect-[73/138] w-1/6" src={Vinglas3} alt=""></Image>
+       </div>
+        <Image class="hidden md:block" src={Medarbejdere} alt=""></Image>
+    </div>
+</article>
+
+</MainLayout>

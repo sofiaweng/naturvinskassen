@@ -15,10 +15,17 @@ import Button from "../components/Button.astro";
             <nav id="desktopmenu" class="hidden lg:block self-center">
                 <div class="flex flex-row gap-8">
                 <ul class="flex flex-row gap-8 self-center">
+<<<<<<< HEAD
                     <li class="ease-linear duration-200"><a href="" class="  hover:border-b-2 border-solid border-darkgrey ease-linear  transition-all duration-200">Naturvinskassen</a></li>
                     <li class="ease-linear duration-200"><a href="" class=" hover:border-b-2 border-solid border-darkgrey transition-all duration-200">
                         F.A.Q.</a></li>
                     <li class="ease-linear duration-200"><a href="" class=" hover:border-b-2 border-solid border-darkgrey transition-all duration-200">Om os</a></li>
+=======
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="/naturvinskassen" class="  hover:border-b-2 border-solid border-darkgrey ease-linear  transition-all duration-200">Naturvinskassen</a></li>
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="/faq" class=" hover:border-b-2 border-solid border-darkgrey transition-all duration-200">
+                        F.A.Q.</a></li>
+                    <li class="hover:scale-110 ease-linear duration-200"><a href="/omos" class=" hover:border-b-2 border-solid border-darkgrey transition-all duration-200">Om os</a></li>
+>>>>>>> 9ad2db6d2b82eb18d32a78e9a49ba18190648cc7
                 </ul>
              
             </div>
@@ -30,9 +37,13 @@ import Button from "../components/Button.astro";
             </div>
             <div class="flex flex-row gap-sm">
                 <a href="" class="hidden lg:block self-center">
+<<<<<<< HEAD
                     <Image class="w-[100%] duration-200 ease-linear" src={Login} alt="linkedin ikon"></Image>
+=======
+                    <Image class="w-[100%] hover:scale-110 duration-200 ease-linear " src={Login} alt="login"></Image>
+>>>>>>> 9ad2db6d2b82eb18d32a78e9a49ba18190648cc7
                 </a>
-                <a href="" class="hidden lg:block self-center">
+                <a href="/bestil" class="hidden lg:block self-center">
                     <Button variant="filled">Bestil Naturvinskassen</Button>
                 </a>
             </div>
@@ -60,7 +71,10 @@ import Button from "../components/Button.astro";
         <nav id="mobilmenu" class="flex flex-col  lg:hidden   py-sm bg-white "
             x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
             <div class="px-xs flex justify-between pb-sm border-lightgrey border-b ">
-                <Button variant="filled">Bestil Naturvinskassen</Button>
+                <a href="/bestil"> 
+                    <Button variant="filled">Bestil Naturvinskassen</Button>
+                </a>
+               
                 <a class="   hover:scale-110  ease-linear duration-200"  href="https://www.linkedin.com/in/sofia-weng-278525212/">
                     <Image class="" src={Login} alt="linkedin ikon"></Image>
                 </a>
@@ -68,11 +82,11 @@ import Button from "../components/Button.astro";
             
             <ul class="flex flex-col gap-xs  body-regular px-xs py-sm ">
      
-                <li class=" border-solid border-darkgrey"><a href="#aboutme" class="transition-all duration-200 ease-in-out">Forside</a></li>
-                <li class=" border-solidborder-darkgrey "><a href="#experience" class=" transition-all duration-200 ease-in-out">
+                <li class=" border-solid border-darkgrey"><a href="/" class="transition-all duration-200 ease-in-out">Forside</a></li>
+                <li class=" border-solidborder-darkgrey "><a href="/naturvinskassen" class=" transition-all duration-200 ease-in-out">
                     Naturvinskassen</a></li>
-                <li class="border-solid border-darkgrey  "><a href="#contact" class="transition-all duration-200 ease-in-out">F.A.Q.</a></li>
-                <li class="border-solid border-darkgrey  "><a href="#contact" class=" transition-all duration-200 ease-in-out">Om os</a></li>
+                <li class="border-solid border-darkgrey  "><a href="/faq" class="transition-all duration-200 ease-in-out">F.A.Q.</a></li>
+                <li class="border-solid border-darkgrey  "><a href="/omos" class=" transition-all duration-200 ease-in-out">Om os</a></li>
             </ul>
   
       </nav>
