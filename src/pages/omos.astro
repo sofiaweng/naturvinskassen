@@ -22,18 +22,18 @@ import VoresWish  from "../assets/images/voreswish.webp";
     }
 </style>
 <MainLayout>
-<article class=" relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto p-xs py-8xl">
+<article class=" relative grid gap-xs md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto p-xs py-8xl">
     <!-- display tekst sættes til absolute, så det går udover billederne -->
     <div class="p-xs absolute flex flex-row gap-m">
-        <Image src={Om} alt=""></Image>
-        <Image class="pt-6xl md:pt-0" src={Os} alt=""></Image>
+        <Image class="pt-sm" src={Om} alt="om skrift"></Image>
+        <Image class="pt-6xl md:pt-0" src={Os} alt="os"></Image>
     </div>
     <div class="">
-        <Image class="w-2/3 md:w-full" src={RasmusOgMichael} alt="Billede af ejerne"></Image>
+        <Image class="mt-lg w-2/3 md:w-full" src={RasmusOgMichael} alt="Billede af ejerne"></Image>
     </div>
-    <div class="self-center">
+    <div class="self-center mt-xs">
          <!-- vinglas og flasker-->
-       <div class="flex flex-row justify-between ">
+       <div class= "w-2/3 md:w-full flex flex-row justify-between  ">
             <Image class="aspect-[73/138] w-[15%]" src={Vinglas1} alt="vinglas illustration"></Image>
             <Image class="aspect-[73/138]  w-[15%]" src={VinFlaskeLeft} alt="vinflaske illustration"></Image>
             <Image class="aspect-[73/138] w-[15%]" src={Vinglas2} alt="vinglas illustration"></Image>
