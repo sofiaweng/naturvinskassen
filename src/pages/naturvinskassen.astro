@@ -1,5 +1,44 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import { Image } from 'astro:assets';
+import NaturvinskassenHero from "../assets/images/naturvinskassenhero.webp";
+import NaturvinskassenSkrift from "../assets/images/naturvinskassen-skrift.svg";
+import NaturvinsMobil from "../assets/images/naturvinsmobil.svg";
+import KassenMobil from "../assets/images/kassenmobil.svg";
 ---
-<MainLayout></MainLayout>
+<MainLayout>
+    <article class="h-[80vh] md:h-full md:py-8xl relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto ">
+        <!-- heading -->
+        <div class="p-xs absolute flex flex-col w-full md:hidden">
+            <Image class="" src={NaturvinsMobil} alt=""></Image>
+            <Image class="-mt-sm" src={KassenMobil} alt=""></Image>
+        </div>
+        <div class="p-xs absolute hidden md:block md:pt-m">
+            <Image class="" src={NaturvinskassenSkrift} alt=""></Image>
+        </div>
+        <!-- billede -->
+        <section class="p-xs w-[55%] self-end md:w-full flex">
+            <Image class="place-self-end"  src={NaturvinskassenHero} alt=""></Image>
+        </section>
+        <!-- tekst -->
+        <section class=" p-xs self-start md:self-center grid gap-sm">
+            <p>
+                Oplev naturvinens autentiske verden med vores abonnement, hvor vi <span class="font-bold leading-relaxed">hver måned leverer 3 nøje udvalgte flasker naturvin</span> direkte til din dør – fragtfrit og uden binding. Kom tæt på vinbønderne, smag vin uden manipulation, og lad dig inspirere af opskrifter og udførlige vinbeskrivelser.
+                <br><br>
+                Som medlem får du eksklusive fordele som rabatter, kassetilbud og forkøbsret på særlige vine. Start din naturvinsrejse i dag og opdag magien i naturlig vinproduktion.
+                
+                <br><br>
+                <span class="font-bold leading-relaxed">Ingen binding. Fri levering. Fuldt fleksibelt.</span>
+            </p>
+            <a href="/bestil">     
+                <Button variant="stroke">Bestil Naturvinskassen (450 DKK/md.)</Button>
+            </a>
+       
+        </section>
+    </article>
+    <article>
+        
+    </article>
+
+</MainLayout>
