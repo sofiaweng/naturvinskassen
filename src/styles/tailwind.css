@@ -22,20 +22,21 @@
   }
   h1 {
     @apply text-headline1;
-    @apply sm:text-headline1;
+    @apply sm:text-headline1-lg;
   }
   h2 {
     @apply text-headline2;
-    @apply sm:text-headline2;
+    @apply sm:text-headline2-lg;
   }
   h3 {
     @apply font-opensans;
     @apply text-headline3;
-    @apply sm:text-headline3;
+    @apply sm:text-headline3-lg;
   }
 
   p {
     @apply text-body;
+    @apply sm:text-body-lg;
     @apply font-opensans;
     @apply font-regular;
   }

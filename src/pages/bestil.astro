@@ -4,11 +4,18 @@ import Button from "../components/Button.astro";
 import { Image } from 'astro:assets';
 import Visa from "../assets/images/visa.svg";
 import Mastercard from "../assets/images/mastercard.svg";
+import BlackNaturvinskassen from "../assets/images/naturvinkassen-black.svg";
 ---
 <style>
-    h1{
+    h2{
         @apply italic;
         @apply text-orange-500
+    }
+    .ikon:hover #first-bar{
+       transform: rotate(90deg);
+    }
+    .ikon:hover #second-bar{
+        transform: rotate(0deg);
     }
 </style>
 <MainLayout>
@@ -40,14 +47,19 @@ import Mastercard from "../assets/images/mastercard.svg";
         id="oversigtsbar" 
         class="flex justify-between border-b lg:hidden border-orange-500 p-xs cursor-pointer">
         <div class="flex-row flex items-center gap-xs">
-            <p class="self-center peer-checked:hidden">Skjul ordreoversigt</p>
+            <p
+             class="self-center peer-checked:hidden ">Skjul ordreoversigt</p>
             <p class="self-center hidden peer-checked:block">Vis ordreoversigt</p>
             <!-- plusikon -->
-            <div class="self-center relative w-6 h-6 flex items-center justify-center transition-transform duration-300">
-                <span 
-                    class="absolute block w-full h-1 bg-green-500 transform rotate-0 peer-checked:rotate-45 transition-transform ease-in-out"></span>
-                <span 
-                    class="absolute block w-full h-1 bg-green-500 transform rotate-90 peer-checked:-rotate-45 transition-transform ease-in-out"></span>
+            <div class="ikon self-center relative w-5 h-6 flex items-center justify-center transition-transform duration-300">
+                <div
+                     id="first-bar"
+                    class="absolute block w-full h-0.5 bg-green-500 transform rotate-45  peer-checked:rotate-0 transition-transform ease-in-out">
+            </div>
+                <span
+                     id="second-bar"
+                    class="absolute block w-full h-0.5 bg-green-500 transform -rotate-45  peer-checked:-rotate-90 transition-transform ease-in-out">
+                </span>
             </div>
         </div>
         <p class="self-center">450 DKK / md.</p>
@@ -60,18 +72,39 @@ import Mastercard from "../assets/images/mastercard.svg";
         class="peer hidden" />
                  <!-- selve ordreoversigten (indholdet) -->
                 <div id="oversigtsindhold" class=" peer-checked:hidden transition-[max-height] duration-300 ease-in-out p-xs lg:p-lg py-sm border-b lg:border-0 border-orange-500 grid gap-xs">
-                    <h1>Ordreoversigt</h1>
+                    <h2 class="text-headline2 sm:text-headline2-lg">Ordreoversigt</h2>
                     <div class="flex flex-row justify-between ">
+                        <article class="flex flex-row gap-xs">
                         <!-- ikon af kassen -->
-                        <div>
-
+                         <div class="">
+                            <div class=" relative rounded-mobile lg:rounded-desktop border border-lightgrey ">
+                                <span class="flex justify-center h-6 w-6 rounded-full absolute -right-2 -top-2 bg-orange-300 aspect-1 p-xxs text-sm">
+                                    <span class="justify-center self-center ">1</span>
+                                </span>
+                                <Image class="p-xxs aspect-1" src={BlackNaturvinskassen} alt="sort natuvinskassen ikon"></Image>
+                            </div>
+                            <div class="relative flex items-center">
+                                <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex-shrink-0 inline-flex items-center justify-center  rounded-md h-5 w-5 focus:ring-0 focus:outline-none">
+                                    <svg class="w-2.5 h-2.5 text-orange-300 hover:text-orange-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+                                    </svg>
+                                </button>
+                                <input type="text" id="counter-input" data-input-counter class="flex-shrink-0 text-darkgrey  border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="1" required />
+                                <button type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex-shrink-0  inline-flex items-center justify-center  h-5 w-5 focus:border-orange-300 focus:ring-0 focus:outline-none">
+                                    <svg class="w-2.5 h-2.5 text-orange-300  hover:text-orange-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#FF9C66" viewBox="0 0 18 18">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
+       
                         <!-- beskrivelse -->
-                        <p>
+                        <p class="py-xs">
                             Naturvinskassen -
                             <br>
                             Månedlig abonnement
                         </p>
+                    </article>
                         <p>
                             450 DKK / md.
                         </p>
@@ -122,7 +155,7 @@ import Mastercard from "../assets/images/mastercard.svg";
         <form class="pt-sm p-xs grid gap-sm lg:px-lg lg:pt-lg">
             <article>
                 <div class="flex flex-row justify-between">
-                     <h1>Kontaktoplysninger</h1>
+                     <h2>Kontaktoplysninger</h2>
                      <a href="" class="underline self-center pointer text-body sm:text-body-lg ">Log ind</a>
                 </div>
                
@@ -136,14 +169,14 @@ import Mastercard from "../assets/images/mastercard.svg";
                     <input 
                         type="text" 
                         id="email-address-icon" 
-                        class="bg-transparent border border-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500 block w-full ps-10 p-2.5" 
+                        class="bg-transparent border placeholder:text-lightgrey border-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500 block w-full ps-10 p-2.5" 
                         placeholder="E-mail">
                 </div>
 
             </article>
             <article class="grid gap-xs">
                 <div>
-                    <h1>Levering</h1>  
+                    <h2>Levering</h2>  
                      <div class="flex-col flex gap-xs"> 
                         <div class="flex items-center me-4">
                             <input checked id="privat" type="radio" value="" name="levering" class="w-4 h-4 text-orange-300 bg-white border-lightgrey focus:ring-red-500 focus:ring-2">
@@ -169,7 +202,10 @@ import Mastercard from "../assets/images/mastercard.svg";
                 </div>
 
                 <div class="grid gap-xs">
-                        <select id="countries" class="bg-white border border-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500">
+                        <select 
+                            id="countries" 
+                            name="contries" 
+                            class="bg-white border border-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500">
                           <option>Danmark</option>
                           <option>Frankrig</option>
                           <option>Tyskland</option>
@@ -178,7 +214,7 @@ import Mastercard from "../assets/images/mastercard.svg";
                         <div class="flex flex-row gap-xs">
                                 <input 
                                     type="text"
-                                    class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-sm rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500  w-full  "
+                                    class="bg-white border border-lightgrey placeholder:text-lightgrey text-darkgrey text-body sm:text-body-lg rounded-mobile md:rounded-desktop focus:ring-orange-500 focus:border-orange-500  w-full  "
                                     placeholder="Fornavn" />
                                 <input 
                                     type="text"
@@ -209,7 +245,7 @@ import Mastercard from "../assets/images/mastercard.svg";
                 </div>
             </article>
             <article>
-                <h1>Betaling</h1>  
+                <h2>Betaling</h2>  
                 <div class="border border-lightgrey">
                     <div class="flex justify-between gap-xs p-xs border-b border-lightgrey">
                         <div class="flex items-center me-4">

@@ -13,9 +13,9 @@ import Om from "../assets/images/om.svg";
 import Os from "../assets/images/os.svg";
 ---
 <MainLayout>
-<article class=" relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto py-8xl">
+<article class=" relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto p-xs py-8xl">
     <!-- display tekst sættes til absolute, så det går udover billederne -->
-    <div class=" absolute flex flex-row gap-m">
+    <div class="p-xs absolute flex flex-row gap-m">
         <Image src={Om} alt=""></Image>
         <Image class="pt-6xl md:pt-0" src={Os} alt=""></Image>
     </div>
@@ -25,11 +25,11 @@ import Os from "../assets/images/os.svg";
     <div class="self-center">
          <!-- vinglas og flasker-->
        <div class="flex flex-row justify-between ">
-            <Image class="aspect-[73/138] w-1/6" src={Vinglas1} alt=""></Image>
-            <Image class="aspect-[73/138] w-1/6" src={VinFlaskeLeft} alt=""></Image>
-            <Image class="aspect-[73/138] w-1/6" src={Vinglas2} alt=""></Image>
-            <Image class="aspect-[73/138] w-1/6" src={VinFlaskeRight} alt=""></Image>
-            <Image class="aspect-[73/138] w-1/6" src={Vinglas3} alt=""></Image>
+            <Image class="aspect-[73/138] w-[15%]" src={Vinglas1} alt=""></Image>
+            <Image class="aspect-[73/138]  w-[15%]" src={VinFlaskeLeft} alt=""></Image>
+            <Image class="aspect-[73/138] w-[15%]" src={Vinglas2} alt=""></Image>
+            <Image class="aspect-[73/138] w-[15%]" src={VinFlaskeRight} alt=""></Image>
+            <Image class="aspect-[73/138] w-[15%]" src={Vinglas3} alt=""></Image>
        </div>
         <!-- medarbejdere billeder, fjernes på mobil -->
         <Image class="hidden md:block" src={Medarbejdere} alt=""></Image>
