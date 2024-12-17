@@ -12,6 +12,12 @@ import Vinglas3 from "../assets/images/vinglas3.svg";
 import Om from "../assets/images/om.svg";
 import Os from "../assets/images/os.svg";
 ---
+<style>
+    h1{
+        @apply italic;
+        @apply text-orange-500
+    }
+</style>
 <MainLayout>
 <article class=" relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto p-xs py-8xl">
     <!-- display tekst sættes til absolute, så det går udover billederne -->
@@ -34,6 +40,36 @@ import Os from "../assets/images/os.svg";
         <!-- medarbejdere billeder, fjernes på mobil -->
         <Image class="hidden md:block" src={Medarbejdere} alt=""></Image>
     </div>
+</article>
+
+<article>
+    <!-- Erfaring og viden -->
+    <section>
+        <div>
+            <h1>Erfaring & viden</h1>
+        </div>
+        <div>
+
+        </div>
+    </section>
+     <!-- Hvorfor naturvinskassen-->
+    <section>
+        <div class="md:order-2">
+            <h1>Hvorfor Naturvinskassen?</h1>
+        </div>
+        <div>
+            
+        </div>
+    </section>
+     <!-- vores ønske-->
+    <section>
+        <div>
+            <h1>Vores ønske</h1>
+        </div>
+        <div>
+            
+        </div>
+    </section>
 </article>
 
 </MainLayout>
