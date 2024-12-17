@@ -45,10 +45,10 @@ import VoresWish  from "../assets/images/voreswish.webp";
     </div>
 </article>
 
-<article>
+<article class="relative">
     <!-- Erfaring og viden -->
-    <section class="md:grid md:grid-cols-2">
-        <div class="bg-offwhite md:bg-transparent self-center grid gap-xxs p-xs py-lg md:p-lg">
+    <section class="md:grid md:grid-cols-2 relative">
+        <div class= "md:sticky md:top-[10%]   bg-offwhite md:bg-transparent self-center grid gap-xxs p-xs py-lg md:p-lg  md:border-y md:border-orange-500">
             <h1>Erfaring & viden</h1>
             <p>
                 Vi har tilsammen over 30 års erfaring i restaurationsbranchen, hvor naturvin altid har været en central del af vores arbejde.
@@ -56,21 +56,21 @@ import VoresWish  from "../assets/images/voreswish.webp";
                 Med denne erfaring og vores nysgerrighed stræber vi efter at skabe fantastiske oplevelser for jer.
             </p>
         </div>
-        <div class="md:w-full h-full">
-            <Image class="md:w-full object-cover h-full w-full" src={Erfaring} alt="Billede af en person, der hælder vin"></Image>
+        <div class="  self-start md:w-full h-full md:-mt-lg   ">
+            <Image class="md:sticky md:top-[10%] md:w-full object-cover md:h-full lg:h-[80%] w-full" src={Erfaring} alt="Billede af en person, der hælder vin"></Image>
         </div>
     </section>
      <!-- Hvorfor naturvinskassen-->
-    <section class="md:grid md:grid-cols-2">
-        <div class=" self-center md:order-2 grid gap-xxs p-xs py-lg md:p-lg ">
+    <section class="md:grid md:grid-cols-2 relative">
+        <div class=" md:sticky md:top-[10%] self-start md:order-2 grid gap-xxs p-xs py-lg md:p-lg  md:-pt-lg md:border-y md:border-orange-500 ">
             <h1 class="hyphens-auto">Hvorfor Naturvinskassen?</h1>
             <p>
                 Vi ønskede en legeplads til vores skøre idéer, nysgerrighed efter nye vine og vinbønder samt vores trang til at dele vinoplevelser. 
                 Derfor skabte vi Naturvinskassen – en lærerig vinrejse uden slutdestination, hvor medlemmerne får glæde af vores passion og hårde arbejde.
             </p>
         </div>
-        <div>
-            <Image class="object-cover h-full w-full" src={Hvorfor} alt="Billede af vinhylde"></Image>
+        <div class=" self-start md:w-full h-full md:border-y md:border-orange-500 ">
+            <Image class= " md:sticky md:top-[20%] md:object-cover  md:h-full lg:h-[80%] w-full" src={Hvorfor} alt="Billede af vinhylde"></Image>
         </div>
     </section>
      <!-- vores ønske-->
