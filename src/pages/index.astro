@@ -26,7 +26,7 @@ import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
 
 <MainLayout title="Naturvinskassen">
   <!-- LANDING SEKTION -->
-  <div class="relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]">
+  <div class="max-w-[1000px] relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]">
     <!-- Images -->
     <div class="absolute flex justify-center top-[110px] z-0 md:top-[100px] md:gap-xs">
       <!-- Left and Right Images -->
@@ -73,9 +73,10 @@ import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
 
 
   <!-- HVAD ER NATURVIN SEKTION -->
-  <div class="mt-2xl relative w-full bg-offwhite pb-ml">
+<div class="bg-offwhite">
+  <div class="max-w-[1000px] mx-auto mt-2xl relative w-full bg-offwhite pb-ml">
     <!-- Grid Container -->
-    <div class="md:grid md:grid-cols-2 md:gap-ml md:p-2xl md:items-start">
+    <div class="md:grid md:grid-cols-2 md:gap-ml md:p-ml md:items-start">
       <!-- Images -->
       <div class="flex flex-col md:gap-ml">
         <Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
@@ -84,9 +85,9 @@ import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
 
       <!-- Text Section -->
       <div class="mt-ml px-xs md:sticky md:top-[20%] md:self-start">
-        <h2 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+        <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
           Hvad er naturvin?
-        </h2>
+        </h1>
         <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
           Naturvin lader naturen tale – fremstillet uden tilsætningsstoffer, kunstig gær eller kemi. Druerne dyrkes økologisk, 
           og produktionen sker med minimal indgriben, hvilket gør hver flaske unik og levende.<br /><br />
@@ -96,52 +97,68 @@ import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
       </div>
     </div>
   </div>
+</div>
 
 
 
   
 <!-- MÅNEDENS VINE SEKTION -->
-<div class="mt-8xl px-xs flex flex-col items-center">
-	<!-- Section Title -->
-	<div class="text-center">
-	  <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
-		Se denne måneds vine
-	  </h1>
-	</div>
-  
-	<!-- Vin Cards -->
-	<div class="flex flex-col gap-s md:grid md:grid-cols-3 md:gap-ml md:mt-ml">
-	  <VinCard
-		title="2023, Juste le Rouge"
-		imageSrc={JusteleRouge.src}
-		kraftig={3}
-		tor={4}
-		frisk={5}
-		description="En let og levende rødvin fra Loire-dalen i Frankrig, fremstillet på Gamay-druer. Denne vin er et klassisk eksempel på naturvinens friske og ufiltrerede stil. Perfekt til lette retter eller som en aperitif."
-		notes="Røde bær som hindbær og jordbær, en snert af viol og en let krydret eftersmag. Frisk og sprød med en saftig syre."
-	  />
-  
-	  <VinCard
-		title="2022, Gavel Sauvignon"
-		imageSrc={GavelSauvignon.src}
-		kraftig={2}
-		tor={5}
-		frisk={4}
-		description="En aromatisk og struktureret hvidvin fra Steiermark i Østrig, fremstillet på Sauvignon Blanc. Denne vin er gæret med naturlig gær og lagret kortvarigt på ståltanke for at bevare sin friskhed og mineralske karakter."
-		notes="Stikkelsbær, grøn peber og et hint af grapefrugt. En elegant mineralitet og frisk syre gør den ideel til salater og fiskeretter."
-	  />
-  
-	  <VinCard
-		title="2021, Terra Ambra"
-		imageSrc={TerraAmbra.src}
-		kraftig={4}
-		tor={4}
-		frisk={3}
-		description="En unik orangevin fra Friuli, Italien, fremstillet på Friulano-druer. Druerne gærer med skallerne i fire uger, hvilket giver vinen sin ravfarvede tone og tanninstruktur."
-		notes="Abrikoser, appelsinskal og et strejf af mandler. Fyldig og tekstureret med en let tanninstruktur, der gør den perfekt til krydrede retter eller fede oste."
-	  />
-	</div>
-  </div>
+<div class="">
+  <div class="max-w-[1500px] mx-auto mt-8xl px-xs flex flex-col items-center">
+    <!-- Section Title -->
+    <div class="text-center">
+      <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+      Se denne måneds vine
+      </h1>
+    </div>
+    
+    <!-- Vin Cards -->
+    <div class="flex flex-col gap-s md:grid md:grid-cols-3 md:gap-ml md:mt-ml">
+      <div data-aos="fade-up"
+      data-aos-delay="">
+        <VinCard
+        title="2023, Juste le Rouge"
+        imageSrc={JusteleRouge.src}
+        kraftig={3}
+        tor={4}
+        frisk={5}
+        description="En let og levende rødvin fra Loire-dalen i Frankrig, fremstillet på Gamay-druer. Denne vin er et klassisk eksempel på naturvinens friske og ufiltrerede stil. Perfekt til lette retter eller som en aperitif."
+        notes="Røde bær som hindbær og jordbær, en snert af viol og en let krydret eftersmag. Frisk og sprød med en saftig syre."
+        />
+      </div>
+
+      <div data-aos="fade-up"
+      data-aos-delay="200">
+        <VinCard
+        title="2022, Gavel Sauvignon"
+        imageSrc={GavelSauvignon.src}
+        kraftig={2}
+        tor={5}
+        frisk={4}
+        description="En aromatisk og struktureret hvidvin fra Steiermark i Østrig, fremstillet på Sauvignon Blanc. Denne vin er gæret med naturlig gær og lagret kortvarigt på ståltanke for at bevare sin friskhed og mineralske karakter."
+        notes="Stikkelsbær, grøn peber og et hint af grapefrugt. En elegant mineralitet og frisk syre gør den ideel til salater og fiskeretter."
+        />
+      </div>
+
+      <div data-aos="fade-up"
+      data-aos-delay="400">
+        <VinCard
+        title="2021, Terra Ambra"
+        imageSrc={TerraAmbra.src}
+        kraftig={4}
+        tor={4}
+        frisk={3}
+        description="En unik orangevin fra Friuli, Italien, fremstillet på Friulano-druer. Druerne gærer med skallerne i fire uger, hvilket giver vinen sin ravfarvede tone og tanninstruktur."
+        notes="Abrikoser, appelsinskal og et strejf af mandler. Fyldig og tekstureret med en let tanninstruktur, der gør den perfekt til krydrede retter eller fede oste."
+        />
+      </div>
+
+    
+
+    </div>
+    </div>
+</div>
+
 
 
 
@@ -167,31 +184,34 @@ import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
 
 
   <!-- HVEM ER VI SEKTION -->
-  <div class="mt-2xl relative w-full bg-offwhite">
-    <!-- Grid Container -->
-    <div class="md:grid md:grid-cols-2 md:gap-ml md:p-2xl md:items-start">
-
-      <!-- Text Section -->
-      <div class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
-        <h2 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
-			Hvem er vi?
-        </h2>
-        <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-			Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog pjalterne sammen i Århus, til fælles kamp for udbredelsen af naturvin. Sammen  startede vi Reduktivt, som er vores naturvinsbutik og importfirma, i hjertet af Århus. Herfra  servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange af  landet bedste restauranter.</p>
-		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-			Men herfra opstod også ideen til Naturvinskassen. Vores lille  abonnements-hjertebarn, som med tiden har vokset sig til et  selvstændigt, nysgerrigt og evigt tørstigt væsen. Altid på jagt efter  nye oplevelser.</p>
-		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-			Til glæde for alle vores medlemmer, selvfølgelig.</p>
-		
-		<Button variant="stroke">Vores mission</Button>
+  <div class="bg-offwhite">
+    <div class="max-w-[1000px] mx-auto mt-2xl relative w-full bg-offwhite">
+      <!-- Grid Container -->
+      <div class="md:grid md:grid-cols-2 md:gap-ml md:p-ml md:items-start">
+  
+        <!-- Text Section -->
+        <div class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
+          <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+        Hvem er vi?
+          </h1>
+          <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+        Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog pjalterne sammen i Århus, til fælles kamp for udbredelsen af naturvin. Sammen  startede vi Reduktivt, som er vores naturvinsbutik og importfirma, i hjertet af Århus. Herfra  servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange af  landet bedste restauranter.</p>
+      <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+        Men herfra opstod også ideen til Naturvinskassen. Vores lille  abonnements-hjertebarn, som med tiden har vokset sig til et  selvstændigt, nysgerrigt og evigt tørstigt væsen. Altid på jagt efter  nye oplevelser.</p>
+      <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+        Til glæde for alle vores medlemmer, selvfølgelig.</p>
+      
+      <Button variant="stroke">Vores mission</Button>
+        </div>
+            <!-- Images -->
+        <div class="flex flex-col md:gap-ml">
+          <Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
+          <Image src={HvadErNaturvin1} alt="Billede af vin" class="w-full h-[350px] object-cover md:h-auto" />
+          </div>
       </div>
-	        <!-- Images -->
-			<div class="flex flex-col md:gap-ml">
-				<Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
-				<Image src={HvadErNaturvin1} alt="Billede af vin" class="w-full h-[350px] object-cover md:h-auto" />
-			  </div>
     </div>
   </div>
+
   
 
 </MainLayout>
