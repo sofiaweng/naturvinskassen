@@ -1,23 +1,23 @@
 ---
-const { caption, bio, image } = Astro.props;
+const { caption, bio, showButton = true } = Astro.props; // Added `showButton` prop with a default value of `true`
+import Button from "../components/Button.astro";
 ---
 
-<div>
-  
-  <button class="accordion text-2xl md:text-large flex justify-between items-center">
-    <h2 class="italic">{caption}</h2>
+<div class="pb-xs sm:pb-ml">
+  <button class="accordion text-2xl md:text-large flex justify-between">
+    <h2 class="text-headline2 sm:text-headline2-lg font-caslon font-semibold italic">{caption}</h2>
     <span class="icon font-extralight"></span>
   </button>
 
-  
-  <div class="panel grid grid-cols-1 md:grid-cols-2 gap-4 items-start overflow-hidden max-h-0 transition-[max-height]">
-    <p class="pt-8">{bio}</p>
-    <img class="pt-8" src={image} alt="" class="max-w-[300px] -mt-5 mx-auto h-auto">
+  <div class="panel items-start overflow-hidden max-h-0 transition-[max-height]">
+    <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed py-xs">{bio}</p>
+
+    {showButton && <Button variant="stroke">Min Naturvinskasse</Button>}
   </div>
-  
-  
-  <div class="border"></div>
+
+  <div class="border border-[0.5px]" style="border-color: #686563;"></div>
 </div>
+
 
 <style>
   .accordion {
@@ -37,8 +37,8 @@ const { caption, bio, image } = Astro.props;
     content: "+"; 
     display: inline-block;
     transition: transform 0.4s ease; 
-    font-size: 4.5rem; 
-    color: #FF5900;
+    font-size: 3.5rem; 
+    color: #f97316;
   }
 
   
@@ -47,7 +47,7 @@ const { caption, bio, image } = Astro.props;
   }
 
   .panel {
-    padding: 0 18px; 
+
     
     max-height: 0; 
     transition: max-height 0.4s ease; 
@@ -57,13 +57,6 @@ const { caption, bio, image } = Astro.props;
   
   .panel.active {
     max-height: 1000px;
-  }
-
-  
-  .border {
-    height: 2px;
-    background-color: grey; 
-    transition: all 0.4s ease; 
   }
 
   

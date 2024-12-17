@@ -25,9 +25,16 @@ import GavelSauvignon from "../assets/images/2022, Gavel Sauvignon.webp";
 import TerraAmbra from "../assets/images/2023, Juste le Rouge.webp";
 import RasmusOgMichael from "../assets/images/rasmusogmichael.webp";
 import ReduktivButik from "../assets/images/Reduktiv_butik.webp";
+import flyve1 from "../assets/images/flyve1.webp";
+import flyve2 from "../assets/images/flyve2.webp";
+import flyve3 from "../assets/images/flyve3.webp";
+import flyve4 from "../assets/images/flyve4.webp";
+import flyve5 from "../assets/images/flyve5.webp";
+import flyve6 from "../assets/images/flyve6.webp";
+
 ---
 
-<MainLayout title="Naturvinskassen">
+  <MainLayout title="Naturvinskassen">
   <!-- HERO SEKTION -->
   <div class="max-w-[1000px] relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]">
     <!-- Images -->
@@ -49,7 +56,7 @@ import ReduktivButik from "../assets/images/Reduktiv_butik.webp";
       <Image src={Vin6} alt="Vin6" class="w-[47px] h-full object-contain" />
       <Image src={Vin7} alt="Vin7" class="w-[47px] h-full object-contain" />
       <Image src={Vin8} alt="Vin8" class="w-[46px] h-full object-contain" />
-    </div>
+    </div> 
 
     <!-- Mobile SVGs -->
     <Image src={MobilJoinThe} alt="Join The" class="w-[70%] max-w-[337px] absolute top-[20px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
@@ -76,18 +83,18 @@ import ReduktivButik from "../assets/images/Reduktiv_butik.webp";
 
 
   <!-- HVAD ER NATURVIN SEKTION -->
-<div class="bg-offwhite">
-  <div class="max-w-[1000px] mx-auto mt-2xl relative w-full bg-offwhite pb-ml">
+  <div class="bg-offwhite">
+  <div class="max-w-[1100px] mx-auto mt-2xl relative w-full bg-offwhite pb-ml">
     <!-- Grid Container -->
     <div class="md:grid md:grid-cols-2 md:gap-ml md:p-ml md:items-start">
       <!-- Images -->
-      <div class="flex flex-col md:gap-ml">
+       <div data-aos="fade-up" class="flex flex-col md:gap-ml">
         <Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
         <Image src={HvadErNaturvin2} alt="Billede af vin" class="w-full h-[350px] object-cover md:h-auto" />
-      </div>
+      </div> 
 
       <!-- Text Section -->
-      <div class="mt-ml px-xs md:sticky md:top-[20%] md:self-start">
+       <div data-aos="fade-up" class="mt-ml px-xs md:px-[0px] md:sticky md:top-[20%] md:self-start">
         <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
           Hvad er naturvin?
         </h1>
@@ -97,16 +104,16 @@ import ReduktivButik from "../assets/images/Reduktiv_butik.webp";
           I modsætning til almindelig vin, der ofte standardiseres med tilsætningsstoffer, er naturvin ufiltreret og uforudsigelig. 
           Smagen varierer og er ofte mere kompleks, skabt i små partier af passionerede vinbønder med fokus på bæredygtighed.
         </p>
-      </div>
+      </div> 
     </div>
   </div>
-</div>
+  </div>
 
 
 
-  
-<!-- MÅNEDENS VINE SEKTION -->
-<div class="">
+
+  <!-- MÅNEDENS VINE SEKTION -->
+  <div class="">
   <div class="max-w-[1500px] mx-auto mt-8xl px-xs flex flex-col items-center">
     <!-- Section Title -->
     <div class="text-center">
@@ -116,7 +123,7 @@ import ReduktivButik from "../assets/images/Reduktiv_butik.webp";
     </div>
     
     <!-- Vin Cards -->
-    <div class="flex flex-col gap-s md:grid md:grid-cols-3 md:gap-ml md:mt-ml">
+     <div class="flex flex-col gap-s md:grid md:grid-cols-3 md:gap-ml md:mt-ml">
       <div data-aos="fade-up"
       data-aos-delay="">
         <VinCard
@@ -156,63 +163,145 @@ import ReduktivButik from "../assets/images/Reduktiv_butik.webp";
         />
       </div>
     </div>
-</div>
+  </div> 
 
 
 
 
 
-<!-- MAD & VIN SEKTION -->
-<div class="mt-[200px]">
-	<MadVin direction="normal" />
-	<MadVin direction="reverse" />
-	<MadVin direction="normal" />
-	<MadVin direction="reverse" />
+  <!-- MAD & VIN SEKTION -->
+   <div class="mt-[200px]">
 
-	<div data-aos="fade-up"
-	 class="mt-ml mx-s gap-sm grid grid-cols-2 md:mt-xl md:mx-2xl md:gap-ml">
-		<p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-			Hos Naturvinskassen handler det ikke kun om vin – det handler om hele oplevelsen. Hver måned får du opskrifter, der passer perfekt til vinene i kassen, og skaber en smagsrejse, hvor mad og vin går op i en højere enhed.
-		  </p>
-		  <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-			Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
-		  </p>
-	</div>
-</div>
+    <section
+    class="relative bg-transparent py-16 overflow-hidden"
+    id="scrollytelling-section">
+  <div class="relative mx-auto h-[150px] md:h-[500px] overflow-visible ">
+    <Image
+      src={flyve1}
+      alt="Asparges"
+      class="absolute w-[100px] md:w-[200px] bottom-5 md:bottom-20 left-[150px] md:left-[50px] scroll-move"
+    />
+    <Image
+      src={flyve2}
+      alt="Vinflaske"
+      class="absolute w-[100px] md:w-[200px] bottom-5 md:bottom-20 left-[250px] md:left-[200px] scroll-move"
+    />
+    <Image
+      src={flyve3}
+      alt="Citron"
+      class="absolute w-[100px] md:w-[200px] bottom-10 md:bottom-20 left-[375px] md:left-[370px] scroll-move"
+    />
+    <Image
+      src={flyve4}
+      alt="Musling"
+      class="absolute w-[100px] md:w-[200px] bottom-34 left-[500px] scroll-move"
+    />
+    <Image
+      src={flyve5}
+      alt="Løg"
+      class="absolute w-[100px] md:w-[200px] md:top-32 md:right-[250px] top-10 right-[100px] scroll-move"
+    />
+    <Image
+      src={flyve6}
+      alt="Grøn ting hvad er det nu den hedder"
+      class="absolute w-[100px] md:w-[200px] bottom-12 right-[-10px] scroll-move"
+    />
+  </div>
+  </section>
+
+    <div>
+        <MadVin direction="normal" />
+        <MadVin direction="reverse" />
+        <MadVin direction="normal" />
+        <MadVin direction="reverse" />      
+    </div>
 
 
+        <div data-aos="fade-up"
+          class="md:pb-8xl mt-ml mx-s gap-sm grid grid-cols-2 md:mt-xl md:mx-[15%] md:gap-ml">
+          <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+            Hos Naturvinskassen handler det ikke kun om vin – det handler om hele oplevelsen. Hver måned får du opskrifter, der passer perfekt til vinene i kassen, og skaber en smagsrejse, hvor mad og vin går op i en højere enhed.
+            </p>
+            <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+            Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
+            </p>
+        </div>
+  </div> 
 
   <!-- HVEM ER VI SEKTION -->
   <div class="bg-offwhite">
     <div class="max-w-[1000px] mx-auto mt-2xl relative w-full bg-offwhite">
       <!-- Grid Container -->
       <div class="md:grid md:grid-cols-2 md:gap-ml md:p-ml md:items-start">
-  
+
         <!-- Text Section -->
-        <div class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
-          <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
-        Hvem er vi?
-          </h1>
-          <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-        Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog pjalterne sammen i Århus, til fælles kamp for udbredelsen af naturvin. Sammen  startede vi Reduktivt, som er vores naturvinsbutik og importfirma, i hjertet af Århus. Herfra  servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange af  landet bedste restauranter.</p>
-      <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-        Men herfra opstod også ideen til Naturvinskassen. Vores lille  abonnements-hjertebarn, som med tiden har vokset sig til et  selvstændigt, nysgerrigt og evigt tørstigt væsen. Altid på jagt efter  nye oplevelser.</p>
-      <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
-        Til glæde for alle vores medlemmer, selvfølgelig.</p>
-      
-      <Button variant="stroke">Vores mission</Button>
+        <div data-aos="fade-up" class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
+              <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+                Hvem er vi?
+              </h1>
+            <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+                Vi er såmænd bare Rasmus og Michael. Et makkerpar, som slog pjalterne sammen i Århus, til fælles kamp for udbredelsen af naturvin. Sammen  startede vi Reduktivt, som er vores naturvinsbutik og importfirma, i hjertet af Århus. Herfra  servicere vi tørstige og nysgerrige naturvinsdrikkere, samt mange af  landet bedste restauranter.</p>
+            <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+              Men herfra opstod også ideen til Naturvinskassen. Vores lille  abonnements-hjertebarn, som med tiden har vokset sig til et  selvstændigt, nysgerrigt og evigt tørstigt væsen. Altid på jagt efter  nye oplevelser.</p>
+            <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+              Til glæde for alle vores medlemmer, selvfølgelig.</p>
+          
+          <Button variant="stroke">Vores mission</Button>
         </div>
             <!-- Images -->
-        <div class="flex flex-col md:gap-ml">
+         <div data-aos="fade-up" class="flex flex-col md:gap-ml">
           <Image src={RasmusOgMichael} alt="Rasmus og Michael - ejere af Naturvinskassen og Reduktiv" class="w-full h-[350px] object-cover md:h-auto" />
           <Image src={ReduktivButik} alt="Billede af Reduktiv naturvin butik" class="w-full h-[350px] object-cover md:h-auto" />
-          </div>
+          </div> 
       </div>
     </div>
   </div>
 
-  
 
-</MainLayout>
+
+
+  <style>
+    /* Base movement for scrolling effect */
+    .scroll-move {
+      transition: transform 0.2s ease-out;
+      opacity: 0; /* Hidden initially */
+    }
+  
+    .visible {
+      opacity: 1; /* Become visible when in the viewport */
+      transition: opacity 0.5s ease-out;
+    }
+  
+  </style>
+
+  <script>
+    document.addEventListener("scroll", () => {
+      const scrollSection = document.getElementById("scrollytelling-section");
+      const scrollPosition = window.scrollY;
+      const images = document.querySelectorAll(".scroll-move");
+      const sectionTop = scrollSection.offsetTop;
+      const sectionHeight = scrollSection.offsetHeight;
+      const viewportHeight = window.innerHeight;
+  
+      // Check if section is in the viewport
+      const sectionInView =
+        scrollPosition + viewportHeight > sectionTop &&
+        scrollPosition < sectionTop + sectionHeight;
+  
+      images.forEach((img, index) => {
+        const speed = 0.5 + index * 0.1;
+        const horizontalOffset = (scrollPosition - sectionTop) * speed;
+        const rotation = (scrollPosition - sectionTop) * (0.05 + index * 0.05); // Rotation factor based on scroll
+  
+        if (sectionInView) {
+          img.style.transform = `translateX(${horizontalOffset}px) rotate(${rotation}deg)`;
+          img.classList.add("visible");
+        } else {
+          img.classList.remove("visible");
+        }
+      });
+    });
+  </script>
+  </MainLayout>
 
 
