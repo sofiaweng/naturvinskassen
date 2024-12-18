@@ -18,15 +18,17 @@
 
   h1,
   h2 {
-    @apply font-caslon font-regular;
+    @apply font-caslon;
   }
   h1 {
     @apply text-headline1;
     @apply sm:text-headline1-lg;
+    @apply font-semibold;
   }
   h2 {
     @apply text-headline2;
     @apply sm:text-headline2-lg;
+    @apply font-regular;
   }
   h3 {
     @apply font-opensans;
