@@ -18,7 +18,7 @@
 
   h1,
   h2 {
-    @apply font-caslon font-semibold;
+    @apply font-caslon font-regular;
   }
   h1 {
     @apply text-headline1;
