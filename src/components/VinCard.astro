@@ -30,7 +30,7 @@ const createDots = (filled: number, total = 5) => {
   </h3>
 
   <!-- Vin Card -->
-  <div class="border border-orange-500 w-[277px] h-[340px] lg:w-[343px] lg:h-[430px]">
+  <div class="border border-orange-500 w-[243px]  lg:w-[343px] ">
 
     <!-- Hoverable billede container -->
     <div class="group relative flex items-center justify-center h-[276px] lg:h-[343px] border-b border-orange-500">
@@ -51,7 +51,7 @@ const createDots = (filled: number, total = 5) => {
     </div>
 
     <!-- Vin karakteristika -->
-    <div class="p-xxs text-xs text-darkgrey lg:p-xs lg:text-body">
+    <div class="p-xxs text-xs text-darkgrey lg:p-xs lg:text-body grid gap-xxs">
       <!-- Kraftig -->
       <div class="flex items-center lg-xxs">
         <span class="w-[55px] lg:w-[70px]">Kraftig:</span>
@@ -67,7 +67,7 @@ const createDots = (filled: number, total = 5) => {
         </div>
       </div>
       <!-- Tør -->
-      <div class="flex items-center mb-xxs">
+      <div class="flex items-center ">
         <span class="w-[55px] lg:w-[70px]">Tør:</span>
         <div class="flex gap-xxs">
           {createDots(tor).map((filled, i) => (
