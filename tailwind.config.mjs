@@ -29,8 +29,8 @@ export default {
         xxs: "4px",
         xs: "16px",
         s: "22px",
-        "15": "15px", // Ny værdi
-        "3": "3px",   // Ny værdi
+        15: "15px", // Ny værdi
+        3: "3px", // Ny værdi
         sm: "32px",
         m: "40px",
         ml: "48px",
@@ -68,24 +68,23 @@ export default {
       fontSize: {
         display: ["48px", { lineHeight: "62px" }], // Mobile
         "display-lg": ["96px", { lineHeight: "110px" }], // Desktop
-      
+
         headline1: ["32px", { lineHeight: "auto" }], // Mobile
         "headline1-lg": ["64px", { lineHeight: "60px" }], // Desktop
-      
+
         headline2: ["24px", { lineHeight: "auto" }], // Mobile
-        "headline2-lg": ["40px", { lineHeight: "auto" }], // Desktop
-      
+        "headline2-lg": ["32px", { lineHeight: "auto" }], // Desktop
+
         headline3: ["16px", { lineHeight: "auto" }], // Mobile
         "headline3-lg": ["20px", { lineHeight: "auto" }], // Desktop
-      
+
         body: ["14px", { lineHeight: "auto" }], // Mobile
         "body-lg": ["16px", { lineHeight: "auto" }], // Desktop
       },
-      
 
       fontWeight: {
         regular: "400",
-        semibold: "600",
+        semibold: "400",
         bold: "700",
       },
     },
