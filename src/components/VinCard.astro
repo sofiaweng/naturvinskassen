@@ -25,9 +25,9 @@ const createDots = (filled: number, total = 5) => {
 ---
 <div>
   <!-- Navn på vin -->
-  <div class="text-headline3 lg:text-headline3-lg font-opensans font-regular text-orange-500">
+  <h3 class="font-regular text-orange-500">
     {title}
-  </div>
+  </h3>
 
   <!-- Vin Card -->
   <div class="border border-orange-500 w-[277px] h-[340px] lg:w-[343px] lg:h-[430px]">
@@ -44,16 +44,16 @@ const createDots = (filled: number, total = 5) => {
       <div
         class="absolute inset-0 bg-orange-500 text-white p-xs opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center lg:p-sm"
       >
-        <p class="text-xs mb-xxs lg:text-body lg:mb-xs">{description}</p>
-        <p class="text-xs font-bold lg:text-body">Smagsnoter:</p>
-        <p class="text-xs lg:text-body">{notes}</p>
+        <p class="text-xs mb-xxs md:text-body md:mb-xs">{description}</p>
+        <p class="text-xs font-bold md:text-body">Smagsnoter:</p>
+        <p class="text-xs md:text-body">{notes}</p>
       </div>
     </div>
 
     <!-- Vin karakteristika -->
     <div class="p-xxs text-xs text-darkgrey lg:p-xs lg:text-body">
       <!-- Kraftig -->
-      <div class="flex items-center mb-xxs">
+      <div class="flex items-center lg-xxs">
         <span class="w-[55px] lg:w-[70px]">Kraftig:</span>
         <div class="flex gap-xxs">
           {createDots(kraftig).map((filled, i) => (
