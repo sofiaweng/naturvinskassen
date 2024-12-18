@@ -63,11 +63,13 @@ import flyve6 from "../assets/images/flyve6.webp";
     <Image src={MobilClub} alt="Club!" class="w-[50%] max-w-[215px] absolute top-[430px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
 
     <!-- Desktop SVG -->
-    <Image src={DesktopJoinTheClub} alt="Join The Club!" class="hidden md:block absolute left-1/2 -translate-x-1/2 max-w-[640px] z-10" />
+     <div>
+        <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="hidden md:block absolute left-1/2 -translate-x-1/2 max-w-[640px] z-10" />
+     </div>
 
     <!-- Text Section -->
     <div class="absolute bottom-[120px] text-left px-xs w-full md:bottom-[100px] md:text-center md:w-[685px] md:mx-auto">
-      <h3 class="text-body font-opensans leading-relaxed md:text-headline3">
+      <h3 class="">
         Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
         udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
         måned efter måned.
@@ -95,10 +97,10 @@ import flyve6 from "../assets/images/flyve6.webp";
 
       <!-- Text Section -->
        <div data-aos="fade-up" class="mt-ml px-xs md:px-[0px] md:sticky md:top-[20%] md:self-start">
-        <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+        <h1 class="italic mb-xxs md:mb-sm text-orange-500">
           Hvad er naturvin?
         </h1>
-        <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+        <p class="mb-sm">
           Naturvin lader naturen tale – fremstillet uden tilsætningsstoffer, kunstig gær eller kemi. Druerne dyrkes økologisk, 
           og produktionen sker med minimal indgriben, hvilket gør hver flaske unik og levende.<br /><br />
           I modsætning til almindelig vin, der ofte standardiseres med tilsætningsstoffer, er naturvin ufiltreret og uforudsigelig. 
@@ -116,8 +118,8 @@ import flyve6 from "../assets/images/flyve6.webp";
   <div class="">
   <div class="max-w-[1500px] mx-auto mt-8xl px-xs flex flex-col items-center">
     <!-- Section Title -->
-    <div class="text-center">
-      <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+    <div data-aos="fade-up" class="text-center">
+      <h1 class="italic mb-sm text-orange-500">
       Se denne måneds vine
       </h1>
     </div>
@@ -175,54 +177,59 @@ import flyve6 from "../assets/images/flyve6.webp";
     <section
     class="relative bg-transparent py-16 overflow-hidden"
     id="scrollytelling-section">
-  <div class="relative mx-auto h-[150px] md:h-[500px] overflow-visible ">
-    <Image
-      src={flyve1}
-      alt="Asparges"
-      class="absolute w-[100px] md:w-[200px] bottom-5 md:bottom-20 left-[150px] md:left-[50px] scroll-move"
-    />
-    <Image
-      src={flyve2}
-      alt="Vinflaske"
-      class="absolute w-[100px] md:w-[200px] bottom-5 md:bottom-20 left-[250px] md:left-[200px] scroll-move"
-    />
-    <Image
-      src={flyve3}
-      alt="Citron"
-      class="absolute w-[100px] md:w-[200px] bottom-10 md:bottom-20 left-[375px] md:left-[370px] scroll-move"
-    />
-    <Image
-      src={flyve4}
-      alt="Musling"
-      class="absolute w-[100px] md:w-[200px] bottom-34 left-[500px] scroll-move"
-    />
-    <Image
-      src={flyve5}
-      alt="Løg"
-      class="absolute w-[100px] md:w-[200px] md:top-32 md:right-[250px] top-10 right-[100px] scroll-move"
-    />
-    <Image
-      src={flyve6}
-      alt="Grøn ting hvad er det nu den hedder"
-      class="absolute w-[100px] md:w-[200px] bottom-12 right-[-10px] scroll-move"
-    />
-  </div>
+  
+    <!-- Scrolling Images (z-10 to be on top of MadVin) -->
+    <div class="absolute inset-0 mx-auto h-[150px] md:h-[500px] overflow-visible z-10 pointer-events-none">
+      <Image
+        src={flyve1}
+        alt="Asparges"
+        class="absolute w-[100px] md:w-[200px] -bottom-40 md:bottom-20 left-[150px] md:left-[50px] scroll-move"
+      />
+      <Image
+        src={flyve2}
+        alt="Vinflaske"
+        class="absolute w-[100px] md:w-[200px] -bottom-20 md:bottom-20 left-[250px] md:left-[200px] scroll-move"
+      />
+      <Image
+        src={flyve3}
+        alt="Citron"
+        class="absolute w-[100px] md:w-[200px] -bottom-28 md:bottom-36 left-[375px] md:left-[370px] scroll-move"
+      />
+      <Image
+        src={flyve4}
+        alt="Musling"
+        class="absolute w-[100px] md:w-[200px] md:bottom-20 -bottom-28 left-[500px] md:left-[55%] scroll-move"
+      />
+      <Image
+        src={flyve5}
+        alt="Løg"
+        class="absolute w-[100px] md:w-[200px] md:top-10 md:right-[250px] top-5 right-[100px] scroll-move"
+      />
+      <Image
+        src={flyve6}
+        alt="Artiskok"
+        class="absolute w-[100px] md:w-[200px] -bottom-5 md:bottom-12 right-[-10px] scroll-move"
+      />
+    </div>
+  
+    <!-- MadVin Component (Background Layer) -->
+    <div class="relative z-0">
+      <MadVin direction="normal" />
+      <MadVin direction="reverse" />
+      <MadVin direction="normal" />
+      <MadVin direction="reverse" />
+    </div>
+  
   </section>
 
-    <div>
-        <MadVin direction="normal" />
-        <MadVin direction="reverse" />
-        <MadVin direction="normal" />
-        <MadVin direction="reverse" />      
-    </div>
 
 
         <div data-aos="fade-up"
-          class="md:pb-8xl mt-ml mx-s gap-sm grid grid-cols-2 md:mt-xl md:mx-[15%] md:gap-ml">
-          <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+          class="md:pb-8xl mx-s gap-sm grid grid-cols-2 md:mx-[15%] md:gap-ml">
+          <p class="mb-sm">
             Hos Naturvinskassen handler det ikke kun om vin – det handler om hele oplevelsen. Hver måned får du opskrifter, der passer perfekt til vinene i kassen, og skaber en smagsrejse, hvor mad og vin går op i en højere enhed.
             </p>
-            <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
+            <p class="mb-sm">
             Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
             </p>
         </div>
@@ -236,7 +243,7 @@ import flyve6 from "../assets/images/flyve6.webp";
 
         <!-- Text Section -->
         <div data-aos="fade-up" class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
-              <h1 class="text-headline1 sm:text-headline1-lg font-caslon font-semibold italic mb-sm text-orange-500">
+              <h1 class="italic mb-xxs md:mb-sm text-orange-500">
                 Hvem er vi?
               </h1>
             <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">

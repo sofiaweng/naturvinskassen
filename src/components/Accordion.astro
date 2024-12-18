@@ -5,12 +5,12 @@ import Button from "../components/Button.astro";
 
 <div class="pb-xs sm:pb-ml">
   <button class="accordion text-2xl md:text-large flex justify-between">
-    <h2 class="text-headline2 sm:text-headline2-lg font-caslon font-semibold italic">{caption}</h2>
+    <h2 class="italic">{caption}</h2>
     <span class="icon font-extralight"></span>
   </button>
 
   <div class="panel items-start overflow-hidden max-h-0 transition-[max-height]">
-    <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed py-xs">{bio}</p>
+    <p class="py-xs">{bio}</p>
 
     {showButton && <Button variant="stroke">Min Naturvinskasse</Button>}
   </div>
