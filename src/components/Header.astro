@@ -2,7 +2,7 @@
 import Link from '../components/Link.astro'
 import { Image } from 'astro:assets';
 import Logo from "../assets/images/logo.svg";
-import Login from "../assets/images/login.svg";
+
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 
@@ -29,8 +29,13 @@ import Button from "../components/Button.astro";
                 </a>
             </div>
             <div class="flex flex-row gap-sm">
-                <a href="" class="hidden lg:block self-center">
-                    <Image class="w-[100%] duration-200 ease-linear" src={Login} alt="linkedin ikon"></Image>
+                <a class="hidden lg:block p-1"  href="">
+                    <div class="w-full h-full">
+                        <div class="bg-[url('/login.svg')] hover:bg-[url('/loginhover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[34-52] w-full h-full bg-no-repeat text-transparent ">
+                           profil
+                        </div>
+                    </div>
+                    <!-- <Image class="" src={Login} alt="linkedin ikon"></Image> -->
                 </a>
                 <a href="/bestil" class="hidden lg:block self-center">
                     <Button variant="filled">Bestil Naturvinskassen</Button>
@@ -64,8 +69,13 @@ import Button from "../components/Button.astro";
                     <Button variant="filled">Bestil Naturvinskassen</Button>
                 </a>
                
-                <a class="   hover:scale-110  ease-linear duration-200"  href="https://www.linkedin.com/in/sofia-weng-278525212/">
-                    <Image class="" src={Login} alt="linkedin ikon"></Image>
+                <a class=""  href="">
+                    <div class="w-full h-full">
+                        <div class="bg-[url('/login.svg')] hover:bg-[url('/loginhover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[34-52] w-full h-full bg-no-repeat text-transparent ">
+                           profil
+                        </div>
+                    </div>
+                    <!-- <Image class="" src={Login} alt="linkedin ikon"></Image> -->
                 </a>
             </div>
             
