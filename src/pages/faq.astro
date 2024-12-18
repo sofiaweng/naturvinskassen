@@ -7,11 +7,13 @@ import Vin1 from "../assets/images/vin1.svg";
 import Vin2 from "../assets/images/vin2.svg";
 import Vin3 from "../assets/images/vin3.svg";
 import Vin4 from "../assets/images/vin4.svg";
+import FAQ from "../assets/images/f.a.q.svg";
 ---
 
 <MainLayout>
-    <div class="max-w-[1100px] mx-auto py-2xl px-xs md:px-[0px] relative w-full">
-        <div class="md:grid md:grid-cols-[3fr_1fr] md:gap-ml md:p-ml md:items-start">
+    <div class="max-w-[1100px] mx-auto py-2xl px-xs md:px-ml relative w-full">
+        <Image src={FAQ} alt="F.A.Q." class="w-[150px] md:w-[300px] h-full justify-center items-center" />
+        <div class="md:grid md:grid-cols-[3fr_1fr] md:gap-ml pt-ml md:pt-4xl md:items-start">
             <div>
                 <Accordion caption="Hvad indeholder min kasse?" bio="Hver måned vil du som medlem af naturvinskassen modtage 3 flasker  udvalgt vin, som alle er lavet ud fra et naturligt udgangspunkt. Derudover vil du modtage en opskrift, kreeret af en restaurant og/eller  en kok, som vi har meget kær. Udførlige beskrivelser af vinene vil  selvfølgelig også medfølge, hver måned! Ved første levering modtager du  en specialdesignet proptrækker, så har du noget godt værktøj at gå i  krig med." showButton={false} />
                 <Accordion caption="Hvor tit bliver min kasse leveret?" bio="Du vil få din naturvinskasse leveret hver måned." showButton={false} />
