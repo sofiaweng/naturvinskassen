@@ -36,7 +36,8 @@
     @apply sm:text-headline3-lg;
   }
 
-  p {
+  p,
+  a {
     @apply text-body;
     @apply sm:text-body-lg;
     @apply font-opensans;
