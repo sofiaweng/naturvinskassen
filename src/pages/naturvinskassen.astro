@@ -54,18 +54,21 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
 
 
 <!-- Hvordan fungerer det sektion -->
-    <article class="p-xs bg-offwhite py-3xl">
-        <h1 class="mb-xs text-center md:mb-lg">Hvordan fungerer der?</h1>
+    <article class="p-xs bg-offwhite py-5xl md:py-3xl">
+        <h1 class="mb-xs text-center md:mb-lg md:mt-lg">Hvordan fungerer der?</h1>
         <!-- steps sektion -->
-        <section class="flex flex-col gap-xs md:flex md:flex-row md:gap-xl px-m md:max-w-[1000px] md:m-auto md:px-0">
+        <section class="py-sm flex flex-col gap-xs md:flex md:flex-row md:gap-xl px-m md:max-w-[1000px] md:m-auto md:px-0 md:py-lg ">
             <section class="flex flex-col md:flex-row gap-xs md:gap-0 relative">
                 <article class="flex flex-row md:flex-col md:justify-start md:gap-xxs  gap-sm ">
                      <!-- tekst -->
                     <div class="self-center md:self-start md:order-2">
                     <!-- heading -->
-                        <h3 class="text-headline3 sm:text-headline3-lg font-bold ">
-                            1.
-                            <br>
+                    <h2 class="md:leading-5">
+                        1.
+                    </h2>
+                        <h3 class=" font-bold ">
+                            <!-- 1.
+                            <br> -->
                             Bestil kassen
                         </h3>
                         <!-- brødtekst -->
@@ -74,12 +77,12 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                         </p>
                     </div>
                     <!-- ikon -->
-                    <div class="md:h-[120px] lg:h-[80px] self-center md:self-start  ">
+                    <div class="md:h-[120px] lg:h-[100px] self-center md:self-start  ">
                         <Image class="" src={NaturvinskassenIkon} alt="vinflaske illustration"></Image>
                     </div>
                 </article>
                 <!-- pil -->
-                <div class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10 md:top-[10vh] lg:top-[6vh]">
+                <div class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
                     <div class=" bg-[url('/bue-right.svg')] aspect-[28/97] md:bg-[url('/bue-up.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
                     </div>
                 </div>
@@ -95,13 +98,19 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                      <!-- tekst -->
                     <div class="self-center md:self-start order-2 md:order-1 grid">
                     <!-- heading -->
-                        <h3 class="md:order-2 text-headline3 sm:text-headline3-lg font-bold">
+                     <div class="md:order-2">
+                        <h2 class="md:leading-5">
                             2.
-                            <br>
+                        </h2>
+                        <h3 class=" font-bold">
+                            <!-- 2.
+                            <br> -->
                             Vi udvælger vin
                         </h3>
+                     </div>
+                      
                         <!-- brødtekst -->
-                        <p class="md:order-1 md:h-[120px] lg:h-[80px]">
+                        <p class="md:order-1 md:h-[120px] lg:h-[100px]">
                             Hver måned håndplukker vi 3 unikke flasker fra passionerede vinbønder.
                         </p>
                     </div>
@@ -124,9 +133,12 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                     <!-- tekst -->
                     <div class="self-center md:self-start md:order-2">
                         <!-- heading -->
-                        <h3 class="text-headline3 sm:text-headline3-lg font-bold ">
+                         <h2 class="md:leading-5">
                             3.
-                            <br>
+                         </h2>
+                        <h3 class=" font-bold ">
+                            <!-- 3.
+                            <br> -->
                             Levering
                         </h3>
                         <!-- brødtekst -->
@@ -135,7 +147,7 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                         </p>
                     </div>
                     <!-- ikon -->
-                    <div class="md:h-[120px] lg:h-[80px] self-center md:self-start md:order-1 -rotate-[30deg]">
+                    <div class="md:h-[120px] lg:h-[100px] self-center md:self-start md:order-1 -rotate-[30deg]">
                         <Image class="" src={Levering} alt="levering illustration"></Image>
                     </div>
                 </article>
@@ -151,13 +163,19 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                     <!-- tekst -->
                     <div class="self-center order-2 md:self-start md:order-1 md:grid">
                         <!-- heading -->
-                        <h3 class="text-headline3 sm:text-headline3-lg font-bold md:order-2 ">
-                            4.
-                            <br>
-                            Nyd vinen
-                        </h3>
+                         <div class=" md:order-2 ">
+                            <h2 class=" md:leading-5">
+                                4.
+                            </h2>
+                            <h3 class=" font-bold">
+                                <!-- 4.
+                                <br> -->
+                                Nyd vinen
+                            </h3>
+                         </div>
+                      
                         <!-- brødtekst -->
-                        <p class="md:h-[120px] lg:h-[80px]">
+                        <p class="md:h-[120px] lg:h-[100px]">
                             Smag, lær og par vinen med opskrifterne i kassen.
                         </p>
                     </div>
