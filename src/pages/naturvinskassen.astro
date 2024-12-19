@@ -2,11 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import { Image } from 'astro:assets';
+
+// billeder
 import NaturvinskassenHero from "../assets/images/naturvinskassenhero.webp";
+import CykelMedVin from "../assets/images/cykelmedvin.webp";
+import MadOgVin from "../assets/images/madogvin.webp";
+
+// headlines
 import NaturvinskassenSkrift from "../assets/images/naturvinskassen-skrift.svg";
 import NaturvinsMobil from "../assets/images/naturvinsmobil.svg";
 import KassenMobil from "../assets/images/kassenmobil.svg";
 
+
+// ikoner
 import NaturvinskassenIkon from "../assets/images/naturvinskassen-red.svg";
 import VinFlaskeRight from "../assets/images/vinflaskeright.svg";
 import Levering from "../assets/images/leveringikon.svg";
@@ -28,15 +36,15 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
     <article class="h-full md:h-full py-5xl md:py-8xl relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto ">
         <!-- heading -->
         <div class="p-xs pt-m   absolute flex flex-col w-full md:hidden">
-            <Image class="" src={NaturvinsMobil} alt=""></Image>
-            <Image class="-mt-sm" src={KassenMobil} alt=""></Image>
+            <Image class="" src={NaturvinsMobil} alt="naturvins"></Image>
+            <Image class="-mt-sm" src={KassenMobil} alt="kassen"></Image>
         </div>
         <div class="p-xs absolute hidden md:block md:pt-m">
-            <Image class="" src={NaturvinskassenSkrift} alt=""></Image>
+            <Image class="" src={NaturvinskassenSkrift} alt="naturvinskassen tekst"></Image>
         </div>
         <!-- billede -->
         <section class="p-xs w-[55%] self-end md:w-full flex">
-            <Image class="place-self-end"  src={NaturvinskassenHero} alt=""></Image>
+            <Image class="place-self-end"  src={NaturvinskassenHero} alt="billede af vin i kasse"></Image>
         </section>
         <!-- tekst -->
         <section class=" p-xs self-start md:self-center grid gap-sm">
@@ -231,7 +239,7 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
             </div>
             <!-- billede -->
             <div>
-
+                <Image src={NaturvinskassenHero} alt="billede af vin i kasse"></Image>
             </div>
         </section>
 
@@ -271,16 +279,16 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
             </div>
             <!-- billede -->
             <div>
-
+                <Image src={MadOgVin} alt="billede af mad og vin sammen"></Image>
             </div>
         </section>
 
 
         <!-- Fri levering & ingen binding -->
-        <section>
+        <section class="grid">
             <!-- billede -->
-            <div>
-
+            <div class="order-2 md:order-1">
+                <Image src={CykelMedVin} alt="billede af en cykel der holder på vinflasker"></Image>
             </div>
             <!-- boks rundt om tekstboks -->
             <div>
