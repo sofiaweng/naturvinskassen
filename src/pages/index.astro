@@ -54,16 +54,23 @@ import flyve6 from "../assets/images/flyve6.webp";
         <div class="">
           <div class=" relative">
             <!-- desktop headline -->
-            <div class="relative">
-              <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="p-xs absolute hidden md:block -top-32" />
+            <div
+             class="relative">
+              <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="z-10 p-xs absolute hidden md:block -top-32" />
             </div>
           <!-- <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="p-xs absolute hidden md:block -top-32" />
         
           <Image src={MobilJoinThe} alt="Join The" class="w-[70%] max-w-[337px] absolute top-[-80px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
           <Image src={MobilClub} alt="Club!" class="w-[50%] max-w-[215px] absolute bottom-[-80px] left-1/2 -translate-x-1/2 z-10 block md:hidden" /> -->
-            <div class="grid grid-cols-2 md:gap-xs px-lg md:px-0">
-                <Image src={LandingImage1} alt="Landing Image 1" class="" />
-                <Image class="pt-[70%]  md:pt-0" src={LandingImage2} alt="Landing Image 2"  />
+            <div
+             class="grid grid-cols-2 md:gap-xs px-lg md:px-0 z-0">
+                <Image
+                data-aos="fade-right"
+                data-aos-duration="1000" src={LandingImage1} alt="Landing Image 1" class="" />
+                <Image
+                  data-aos="fade-left"
+                data-aos-duration="1000"
+                 class="pt-[70%]  md:pt-0" src={LandingImage2} alt="Landing Image 2"  />
             </div>
 
             <!-- mobil headline -->
@@ -75,12 +82,16 @@ import flyve6 from "../assets/images/flyve6.webp";
 
         <!-- headline3 og knap -->
           <div class="grid gap-xs md:gap-sm">
-              <h3 class="md:text-center pt-5xl md:pt-sm">
+              <h3
+                data-aos="fade-up"
+               class="md:text-center pt-5xl md:pt-sm">
                 Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
                 udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
                 måned efter måned.
               </h3>
-              <a class="flex justify-end" href="/naturvinskassen">
+              <a
+              data-aos="fade-up"
+               class="flex justify-end" href="/naturvinskassen">
                 <Button variant="stroke">Læs mere her</Button>
               </a>
           </div>
