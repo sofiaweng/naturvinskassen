@@ -250,7 +250,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
 
     <!--     HVAD INDEHOLDER NATURVINSKASSEN SEKTION -->
 <div class="pt-8xl">
-  <section class="relative mx-auto max-w-[1000px] py-40 overflow-hidden">
+  <section data-aos="fade-up" class="relative mx-auto max-w-[1000px] py-40 overflow-hidden">
       <div class="relative mx-auto max-w-[600px] aspect-square flex items-center justify-center">
   
         <Image 
@@ -266,16 +266,33 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
         />
       </div>
     </section>
-      <div data-aos="fade-up"
-      class="md:pb-8xl mt-sm mx-s gap-sm grid grid-cols-2 md:mx-[15%] md:gap-ml">
-      <p class="mb-sm">
-          Som medlem af Naturvinskassen modtager du hver måned 3 flasker nøje udvalgt naturvin, fremstillet med respekt for naturen og uden manipulation. Hver flaske fortæller sin egen historie og giver dig en unik smagsoplevelse.
+    <div>
+      <h2 data-aos="fade-up" class="mt-sm text-center italic text-orange-500 mb-s">
+        Når du bestiller Naturvinskassen får du:
+      </h2>
+    </div>
+      <div data-aos="fade-up" class="md:pb-8xl mx-s gap-sm grid grid-cols-2 md:mx-[15%] md:gap-ml">
+        <div>
+            <p class="">
+              Som medlem af Naturvinskassen modtager du hver måned <span class="font-semibold">3 flasker nøje udvalgt naturvin</span>, fremstillet med respekt for naturen og uden manipulation. Hver flaske fortæller sin egen historie og giver dig en unik smagsoplevelse.
+            </p>
+        </div>
+        <div class="">
+          <p>
+            Derudover får du:
           </p>
-          <p class="mb-sm">
-          Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
-          </p>
+          <ol class="list-disc ml-sm">
+          <li >
+            <span class="font-semibold">Opskrifter </span>udviklet af anerkendte kokke eller eksklusive århusianske restauranter.
+          </li>
+            <li >
+              <span class="font-semibold">Vinbeskrivelser </span>der giver dig indblik i smagsnoter, oprindelse og vinbøndernes dybfølte passion.
+            </li>
+          </ol>
+        </div>
       </div>
 </div>
+
 
 
 <!-- Tre ting du får med i pakken -->
@@ -311,7 +328,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
                     <li>
                         <span class="font-semibold">Velkomst- og jubilæumsgaver</span> som en tak for din loyalitet.
                     </li>
-                </ol>
+                  </ol>
                 </div>
             </div>
             <!-- billede -->
