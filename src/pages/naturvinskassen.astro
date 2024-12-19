@@ -204,15 +204,15 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
 
 
 <!-- Tre ting du får med i pakken -->
-    <article>
+    <article class="md:grid md:grid-cols-3">
 
         <!-- Medlemsfordele -->
         <section>
             <!-- boks rundt om tekstboks -->
-            <div>
+            <div class="py-m  flex">
                 <!-- tekstboks -->
-                <div>
-                    <h2>
+                <div class="self-center p-xs grid gap-xs" >
+                    <h2 class="">
                         Medlemsfordele
                     </h2>
                     <p >
@@ -221,18 +221,18 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                         og får adgang til
                         <span class="font-semibold"> eksklusive fordele</span>:
                     </p>
-                   <ol class="list-disc">
+                   <ol class="list-disc ml-sm">
                     <li >
-                        10% rabat på køb over 500 kr. i vores butik.
+                        <span class="font-semibold">10% rabat </span>på køb over 500 kr. i vores butik.
                     </li>
                     <li>
-                        Månedlige kassetilbud, hvor du kan købe særligt udvalgte vine til en god pris.
+                        <span class="font-semibold">Månedlige kassetilbud</span>, hvor du kan købe særligt udvalgte vine til en god pris.
                     </li>
                     <li>
-                        Forkøbsret på allokationsvine, så du aldrig går glip af de mest eftertragtede flasker.
+                        <span class="font-semibold">Forkøbsret på allokationsvine</span>, så du aldrig går glip af de mest eftertragtede flasker.
                     </li>
                     <li>
-                        Velkomst- og jubilæumsgaver som en tak for din loyalitet.
+                        <span class="font-semibold">Velkomst- og jubilæumsgaver</span> som en tak for din loyalitet.
                     </li>
                 </ol>
                 </div>
@@ -246,32 +246,31 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
         <!-- Smag, lær & nyd -->
         <section>
             <!-- boks rundt om tekstboks -->
-            <div>
+            <div class="py-m flex ">
                 <!-- tekstboks -->
-                <div>
-                    <h2>
+                <div class="self-center p-xs grid gap-xs" >
+                    <h2 class="">
                         Smag, lær & nyd
                     </h2>
                     <p >
                         Med Naturvinskassen bliver vin ikke bare en drik – det bliver en oplevelse. 
                         Hver måned udforsker du vinens verden gennem:
                     </p>
-                   <ol class="list-disc">
+                   <ol class="list-disc ml-sm">
                         <li >
-                            Historien bag flaskerne: Lær om vinbøndernes metoder og lidenskab.
+                            <span class="font-semibold">Historien bag flaskerne</span>: Lær om vinbøndernes metoder og lidenskab.
                         </li>
                         <li>
-                            Oprindelse og terroir: Forstå, hvordan  regionen og klimaet påvirker smagen.
+                            <span class="font-semibold">Oprindelse og terroir</span> : Forstå, hvordan  regionen og klimaet påvirker smagen.
                         </li>
                         <li>
-                            Forkøbsret på allokationsvine, så du aldrig går glip af de mest eftertragtede flasker.
-                        </li>
-                        <li>
-                            Smagsnoter: Få et dybere indblik i vinens karakter og kompleksitet.
+                            <span class="font-semibold">Smagsnoter</span>: Få et dybere indblik i vinens karakter og kompleksitet.
                         </li>
                     </ol>
                     <p>
-                        Vi tilføjer også opskrifter og madanbefalinger, 
+                        Vi tilføjer også 
+                        <span class="font-semibold">opskrifter </span>og 
+                        <span class="font-semibold">madanbefalinger</span>, 
                         der gør det nemt at parre vinene med måltider 
                         og løfte smagsoplevelsen.
                     </p>
@@ -285,32 +284,34 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
 
 
         <!-- Fri levering & ingen binding -->
-        <section class="grid">
+        <section class="grid ">
             <!-- billede -->
             <div class="order-2 md:order-1">
                 <Image src={CykelMedVin} alt="billede af en cykel der holder på vinflasker"></Image>
             </div>
             <!-- boks rundt om tekstboks -->
-            <div>
+            <div class="py-m  md:order-2">
                 <!-- tekstboks -->
-                <div>
-                    <h2>
+                <div class="self-center p-xs  grid gap-xs" >
+                    <h2 class="">
                         Fri levering & ingen binding
                     </h2>
                     <p >
-                        Hos Naturvinskassen får du fri levering hver måned, uanset hvor i Danmark du bor – og bor du i Aarhus, leverer vi med cykelbud for at minimere miljøpåvirkningen.
+                        Hos Naturvinskassen får du <span class="font-semibold">fri levering</span> hver måned, uanset hvor i Danmark du bor – og bor du i Aarhus, leverer vi med cykelbud for at minimere miljøpåvirkningen.
                         <br><br>
                         Med os binder du dig aldrig. Du kan:
                     </p>
-                   <ol class="list-disc">
+                   <ol class="list-disc ml-sm">
                         <li >
-                            Sætte abonnementet på pause.
+                            <span class="font-semibold">Sætte abonnementet på pause.</span>
                         </li>
                         <li>
-                            Skifte leveringsadresse.
+                            <span class="font-semibold">Skifte leveringsadresse.</span>
+                            
                         </li>
                         <li>
-                            Stoppe, når det passer dig.
+                            <span class="font-semibold">Stoppe, når det passer dig.</span>
+                            
                         </li>
                     </ol>
                     <p>
