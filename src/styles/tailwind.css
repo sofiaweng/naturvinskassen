@@ -72,4 +72,21 @@
     animation: scroll-reverse 60s linear infinite;
     animation-fill-mode: forwards;
   }
+
+  .vippe {
+    animation: vippe 2s infinite step-end;
+  }
+
+  @keyframes vippe {
+    0%,
+    100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+  .delay {
+    animation-delay: 1s;
+  }
 }
