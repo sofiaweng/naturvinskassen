@@ -35,19 +35,29 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
 <MainLayout>
     <article class="h-full md:h-full py-5xl md:py-8xl relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto ">
         <!-- heading -->
-        <div class="p-xs pt-m   absolute flex flex-col w-full md:hidden">
+        <div
+            data-aos="fade-in"
+             data-aos-duration="500"
+         class="p-xs pt-m   absolute flex flex-col w-full md:hidden">
             <Image class="" src={NaturvinsMobil} alt="naturvins"></Image>
             <Image class="-mt-sm" src={KassenMobil} alt="kassen"></Image>
         </div>
-        <div class="p-xs absolute hidden md:block md:pt-m">
+        <div
+        data-aos="fade-in"
+         data-aos-duration="500"
+         class="p-xs absolute hidden md:block md:pt-m">
             <Image class="" src={NaturvinskassenSkrift} alt="naturvinskassen tekst"></Image>
         </div>
         <!-- billede -->
-        <section class="p-xs w-[55%] self-end md:w-full flex">
+        <section
+          data-aos="fade-right"
+         class="p-xs w-[55%] self-end md:w-full flex">
             <Image class="place-self-end"  src={NaturvinskassenHero} alt="billede af vin i kasse"></Image>
         </section>
         <!-- tekst -->
-        <section class=" p-xs self-start md:self-center grid gap-sm">
+        <section
+        data-aos="fade-left"
+         class=" p-xs self-start md:self-center grid gap-sm">
             <p>
                 Oplev naturvinens autentiske verden med vores abonnement, hvor vi <span class="font-bold leading-relaxed">hver måned leverer 3 nøje udvalgte flasker naturvin</span> direkte til din dør – fragtfrit og uden binding. Kom tæt på vinbønderne, smag vin uden manipulation, og lad dig inspirere af opskrifter og udførlige vinbeskrivelser.
                 <br><br>
@@ -69,11 +79,17 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
 
 <!-- Hvordan fungerer det sektion -->
     <article class="p-xs bg-offwhite py-5xl md:py-3xl">
-        <h1 class="mb-xs text-center md:mb-lg md:mt-lg">Hvordan fungerer der?</h1>
+        <h1
+         data-aos="fade-up"
+         class="mb-xs text-center md:mb-lg md:mt-lg">Hvordan fungerer der?</h1>
         <!-- steps sektion -->
-        <section class="py-sm flex flex-col gap-xs md:flex md:flex-row md:gap-xl px-m md:max-w-[1000px] md:m-auto md:px-0 md:py-lg ">
-            <section class="flex flex-col md:flex-row gap-xs md:gap-0 relative">
-                <article class="flex flex-row md:flex-col md:justify-start md:gap-xxs  gap-sm ">
+        <section
+         class="py-sm flex flex-col gap-xs md:flex md:flex-row md:gap-xl px-m md:max-w-[1000px] md:m-auto md:px-0 md:py-lg ">
+            <section
+             class="flex flex-col md:flex-row gap-xs md:gap-0 relative">
+                <article
+                 data-aos="fade-up"
+                 class="flex flex-row md:flex-col md:justify-start md:gap-xxs  gap-sm ">
                      <!-- tekst -->
                     <div class="self-center md:self-start md:order-2">
                     <!-- heading -->
@@ -96,7 +112,9 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                     </div>
                 </article>
                 <!-- pil -->
-                <div class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
+                <div
+                data-aos="fade-in"
+                 class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
                     <div class=" bg-[url('/bue-right.svg')] aspect-[28/97] md:bg-[url('/bue-up.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
                     </div>
                 </div>
@@ -108,7 +126,10 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
             </section>
 
             <section class="flex flex-col md:flex-row gap-xs relative ">
-                <article class="flex flex-row md:flex-col md:justify-start md:gap-xxs justify-between gap-sm ">
+                <article 
+                data-aos="fade-up"
+                data-aos-delay="200"
+                class="flex flex-row md:flex-col md:justify-start md:gap-xxs justify-between gap-sm ">
                      <!-- tekst -->
                     <div class="self-center md:self-start order-2 md:order-1 grid">
                     <!-- heading -->
@@ -135,7 +156,10 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                 </article>
 
                 <!-- pil -->
-                <div class="grid justify-items-start w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10 md:bottom-[6vh]">
+                <div
+                  data-aos="fade-in"
+                   data-aos-delay="200"
+                 class="grid justify-items-start w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10 md:bottom-[6vh]">
                     <div class=" bg-[url('/bue-left.svg')] aspect-[28/97] md:bg-[url('/bue-down.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
                     </div>
                 </div>
@@ -143,7 +167,10 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
             </section>
 
             <section class="flex flex-col md:flex-row gap-xs relative ">
-                <article class="flex flex-row md:flex-col md:gap-xxs   md:justify-start justify-between gap-sm ">
+                <article
+                  data-aos="fade-up"
+                   data-aos-delay="400"
+                 class="flex flex-row md:flex-col md:gap-xxs   md:justify-start justify-between gap-sm ">
                     <!-- tekst -->
                     <div class="self-center md:self-start md:order-2">
                         <!-- heading -->
@@ -166,14 +193,20 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
                     </div>
                 </article>
                   <!-- pil -->
-                  <div class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
+                  <div
+                    data-aos="fade-in"
+                    data-aos-delay="900"
+                   class="grid justify-items-end w-[30%] mx-auto  md:w-[170px]  md:absolute md:-right-10  md:top-[10vh] lg:top-[6vh]">
                     <div class=" bg-[url('/bue-right.svg')] aspect-[28/97] md:bg-[url('/bue-up.svg')] md:aspect-[191/44] md:w-[100%] bg-contain w-[20%] bg-no-repeat ">
                     </div>
                 </div>
             </section>
 
             <section class="flex flex-col md:flex-row gap-xs relative ">
-                <article class="flex flex-row md:flex-col md:gap-xxs  md:justify-end justify-between gap-sm">
+                <article
+                  data-aos="fade-up"
+                     data-aos-delay="600"
+                 class="flex flex-row md:flex-col md:gap-xxs  md:justify-end justify-between gap-sm">
                     <!-- tekst -->
                     <div class="self-center order-2 md:self-start md:order-1 md:grid">
                         <!-- heading -->
