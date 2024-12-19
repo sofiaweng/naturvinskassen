@@ -47,7 +47,67 @@ import VoresWish  from "../assets/images/voreswish.webp";
     </div>
 </article>
 
-<article class="relative">
+<article class="hidden md:grid md:grid-cols-2 relative">
+    <section class=" grid relative border-orange-500 border-x border-t">
+        <div class="h-[80vh] relative ">
+        <div class= "h-[500px] lg:h-[420px] md:sticky md:top-[10%] self-start bg-offwhite md:bg-transparent grid md:border-orange-500 ">
+            <div class="self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+                <h1>Erfaring & viden</h1>
+                <p>
+                    Vi har tilsammen over 30 års erfaring i restaurationsbranchen, hvor naturvin altid har været en central del af vores arbejde.
+                    Vores rejse har ført os fra Michelin-restauranter til nogle af landets bedste vinbarer, hvilket har givet os både ekspertise og passion for vinens verden. 
+                    Med denne erfaring og vores nysgerrighed stræber vi efter at skabe fantastiske oplevelser for jer.
+                </p> 
+            </div>
+        </div> 
+        </div>
+       
+        <div class="h-[100vh]">
+            <div class="md:sticky md:top-[10%] self-start md:border-orange-500 border-t border-b  h-[500px] lg:h-[420px] ">
+               <Image class= " md:object-cover  md:h-full  w-full" src={Hvorfor} alt="Billede af vinhylde"></Image>
+           </div>
+        </div>
+        <div class=" relative">
+            <div class=" h-[500px] lg:h-[420px]   bg-offwhite md:bg-transparent grid md:border-orange-500 ">
+                <div class="self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+                    <h1>Vores ønske</h1>
+                    <p>
+                        Vores arbejde med Naturvinskassen handler først og fremmest om at videreformidle og dele oplevelser, med alle vores medlemmer! Det er lige præcis dét, som vi hele tiden bestræber os på. 
+                        Vi støder på rigtig, rigtig mange vinbønder og smager endnu flere vine. Noget smager godt, noget smager knap så godt, og noget smager så godt, at vi bliver nødt til at dele det med alle vores medlemmer.
+                    </p>
+                </div>
+            </div> 
+        </div>
+     
+
+    </section>
+    <section class="border-orange-500 border-t border-r  md:sticky md:top-[10%] self-start">
+        <div class="h-[80vh]  relative">
+            <div class="md:sticky md:top-[10%] self-center h-[500px] lg:h-[420px]  md:border-orange-500 border-b  ">
+                <Image class=" object-cover md:h-full  w-full" src={Erfaring} alt="Billede af en person, der hælder vin"></Image>
+            </div>
+        </div>
+        <div class="h-[500px] lg:h-[420px] self-start  bg-offwhite md:bg-transparent grid md:border-orange-500 md:order-2">
+            <div class=" self-center grid gap-xxs md:gap-xs p-xs py-lg md:p-lg">
+           <h1 class="hyphens-auto">Hvorfor Naturvinskassen?</h1>
+           <p>
+               Vi ønskede en legeplads til vores skøre idéer, nysgerrighed efter nye vine og vinbønder samt vores trang til at dele vinoplevelser. 
+               Derfor skabte vi Naturvinskassen – en lærerig vinrejse uden slutdestination, hvor medlemmerne får glæde af vores passion og hårde arbejde.
+           </p>
+           </div>
+       </div>
+       <div class="">
+            <div class="h-[500px] lg:h-[420px]  md:border-orange-500  border-t ">
+                <Image class="object-cover h-full w-full" src={VoresWish} alt="Billede af flasker fra en boks"></Image>
+            </div>
+        </div>
+    
+
+    </section>
+</article>
+
+
+<article class="relative md:hidden">
     <!-- Erfaring og viden -->
     <section class="relative md:h-[150vh] md:grid md:grid-cols-2  ">
   
