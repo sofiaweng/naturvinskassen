@@ -7,12 +7,13 @@ import { Image } from 'astro:assets';
 import NaturvinskassenHero from "../assets/images/naturvinskassenhero.webp";
 import CykelMedVin from "../assets/images/cykelmedvin.webp";
 import MadOgVin from "../assets/images/madogvin.webp";
+import NaturvinsKassen from "../assets/images/Naturvinskassen.webp";
 
 // headlines
 import NaturvinskassenSkrift from "../assets/images/naturvinskassen-skrift.svg";
 import NaturvinsMobil from "../assets/images/naturvinsmobil.svg";
 import KassenMobil from "../assets/images/kassenmobil.svg";
-
+import CirkulaerTekst from "../assets/images/Cirkulaer_tekst.svg";
 
 // ikoner
 import NaturvinskassenIkon from "../assets/images/naturvinskassen-red.svg";
@@ -31,6 +32,19 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
     @apply font-opensans;
     @apply font-regular;
     }
+
+@keyframes spin-slow {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+.animate-spin-slow {
+animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotation */
+}
 </style>
 <MainLayout>
     <article class="h-full md:h-full py-5xl md:py-8xl relative grid md:grid-cols-2 md:gap-xs max-w-[1000px] mx-auto ">
@@ -72,8 +86,6 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
        
         </section>
     </article>
-
-
 
 
 
@@ -236,8 +248,40 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
     </article>
 
 
+    <!--     HVAD INDEHOLDER NATURVINSKASSEN SEKTION -->
+<div class="pt-8xl">
+  <section class="relative mx-auto max-w-[1000px] py-40 overflow-hidden">
+      <div class="relative mx-auto max-w-[600px] aspect-square flex items-center justify-center">
+  
+        <Image 
+          class="animate-spin-slow absolute inset-0 m-auto" 
+          src={CirkulaerTekst} 
+          alt="Cirkulær roterende tekst hvor der står 'Hvad indeholder Naturvinskassen?'"
+        />
+  
+        <Image 
+          class="relative z-10 w-[50%] md:w-[60%]" 
+          src={NaturvinsKassen} 
+          alt="Et billede af Naturvinskassen"
+        />
+      </div>
+    </section>
+      <div data-aos="fade-up"
+      class="md:pb-8xl mt-sm mx-s gap-sm grid grid-cols-2 md:mx-[15%] md:gap-ml">
+      <p class="mb-sm">
+          Som medlem af Naturvinskassen modtager du hver måned 3 flasker nøje udvalgt naturvin, fremstillet med respekt for naturen og uden manipulation. Hver flaske fortæller sin egen historie og giver dig en unik smagsoplevelse.
+          </p>
+          <p class="mb-sm">
+          Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
+          </p>
+      </div>
+</div>
+
+
 <!-- Tre ting du får med i pakken -->
-    <article class="md:grid md:grid-cols-3 md:pt-3xl md:h-[350vh] relative">
+ <div>
+  <h1 class="text-center pt-xl">Fordele ved Naturvinskassen</h1>
+      <article class="md:grid md:grid-cols-3 md:pt-3xl md:h-[350vh] relative">
 
         <!-- Medlemsfordele -->
         <section class="md:sticky md:top-[11%]  self-start ">
@@ -354,4 +398,6 @@ import SkaalIkon from "../assets/images/skaal-ikon.svg";
             </div>
         </section>
     </article>
+ </div>
+
 </MainLayout>
