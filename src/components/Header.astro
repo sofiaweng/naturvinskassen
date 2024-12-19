@@ -7,6 +7,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 
 ---
+<style>
+    li{
+        @apply text-green-500; 
+
+    }
+</style>
 
 
 <div class="body z-50">
@@ -15,7 +21,7 @@ import Button from "../components/Button.astro";
             <nav id="desktopmenu" class="hidden lg:block self-center">
                 <div class="flex flex-row gap-8">
                 <ul class="flex flex-row gap-8 self-center">
-                    <li class="ease-linear duration-200"><a href="/naturvinskassen" class="  hover:border-b border-solid border-darkgrey ease-linear  transition-all duration-200">Naturvinskassen</a></li>
+                    <li class="ease-linear duration-200"><a href="/naturvinskassen" class=" hover:border-b border-solid border-darkgrey ease-linear  transition-all duration-200">Naturvinskassen</a></li>
                     <li class="ease-linear duration-200"><a href="/faq" class=" hover:border-b border-solid border-darkgrey transition-all duration-200">
                         F.A.Q.</a></li>
                     <li class="ease-linear duration-200"><a href="/omos" class=" hover:border-b border-solid border-darkgrey transition-all duration-200">Om os</a></li>
