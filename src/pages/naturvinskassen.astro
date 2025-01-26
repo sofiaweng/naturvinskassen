@@ -22,10 +22,13 @@ import Levering from "../assets/images/leveringikon.svg";
 import SkaalIkon from "../assets/images/skaal-ikon.svg";
 ---
 <style>
-
+    h1, h2{
+        @apply italic;
+        @apply text-orange-500
+    }
     li{
         @apply text-body;
-    @apply sm:text-body-desktop;
+    @apply sm:text-body-lg;
     @apply font-opensans;
     @apply font-regular;
     }
@@ -105,7 +108,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
                     <h2 class="md:leading-5">
                         1.
                     </h2>
-                        <h3 class=" ">
+                        <h3 class=" font-bold ">
                             <!-- 1.
                             <br> -->
                             Bestil kassen
@@ -146,7 +149,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
                         <h2 class="md:leading-5">
                             2.
                         </h2>
-                        <h3 class=" ">
+                        <h3 class=" font-bold">
                             <!-- 2.
                             <br> -->
                             Vi udvælger vin
@@ -186,7 +189,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
                          <h2 class="md:leading-5">
                             3.
                          </h2>
-                        <h3 class=" ">
+                        <h3 class=" font-bold ">
                             <!-- 3.
                             <br> -->
                             Levering
@@ -223,7 +226,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
                             <h2 class=" md:leading-5">
                                 4.
                             </h2>
-                            <h3 class=" ">
+                            <h3 class=" font-bold">
                                 <!-- 4.
                                 <br> -->
                                 Nyd vinen
@@ -264,7 +267,7 @@ animation: spin-slow 30s linear infinite; /* 10s duration, smooth infinite rotat
       </div>
     </section>
     <div>
-      <h2 data-aos="fade-up" class="mt-sm  mx-s md:text-center mb-s">
+      <h2 data-aos="fade-up" class="mt-sm  mx-s md:text-center italic text-orange-500 mb-s">
         Når du bestiller Naturvinskassen får du:
       </h2>
     </div>
