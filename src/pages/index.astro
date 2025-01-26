@@ -19,6 +19,7 @@ import Vin8 from "../assets/images/vin8.svg";
 import MobilJoinThe from "../assets/images/mobil_join_the.svg";
 import MobilClub from "../assets/images/mobil_club.svg";
 import DesktopJoinTheClub from "../assets/images/desktop_join_the_club.svg";
+import HvadErNaturvin1gif from "../assets/images/vin.gif";
 import HvadErNaturvin1 from "../assets/images/hvad_er_naturvin1.webp";
 import HvadErNaturvin2 from "../assets/images/natural wine framing.webp";
 import JusteleRouge from "../assets/images/2021, Terra Ambra.webp";
@@ -32,83 +33,38 @@ import flyve3 from "../assets/images/flyve3.webp";
 import flyve4 from "../assets/images/flyve4.webp";
 import flyve5 from "../assets/images/flyve5.webp";
 import flyve6 from "../assets/images/flyve6.webp";
-
+import HeroGif1 from "../assets/images/hero-1.gif";
+import HeroGif2 from "../assets/images/hero-2.gif";
+import HeroGif3 from "../assets/images/hero-3.gif";
 ---
 
-  <MainLayout title="Naturvinskassen">
-
-    <article class=" h-full py-xl pt-36 md:pt-40 relative max-w-[1000px] mx-auto p-sm">
-      <!-- tekst -->
-
-      <section class="flex flex-row gap-m lg:gap-2xl">
-
-        <!-- vinflasker -->
-        <div class="flex-col md:flex  gap-xs w-[10%] lg:w-[8%] hidden h-[70vh] lg:h-[80vh]">
-          <Image src={Vin1} alt="Vin1" class="vippe h-full w-full object-contain aspect-[33/100]" />
-          <Image src={Vin2} alt="Vin2" class="vippe delay h-full  w-full object-contain aspect-[33/100]" />
-          <Image src={Vin3} alt="Vin3" class="vippe  h-full  w-full object-contain aspect-[33/100]" />
-          <Image src={Vin4} alt="Vin4" class="vippe delay h-full  w-full object-contain aspect-[33/100]" />
-        </div>
-
-        <!-- headline og landing pics -->
-        <div class="">
-          <div class=" relative">
-            <!-- desktop headline -->
-            <div
-             class="relative">
-              <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="z-10 p-xs absolute hidden md:block -top-32" />
-            </div>
-          <!-- <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="p-xs absolute hidden md:block -top-32" />
-        
-          <Image src={MobilJoinThe} alt="Join The" class="w-[70%] max-w-[337px] absolute top-[-80px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
-          <Image src={MobilClub} alt="Club!" class="w-[50%] max-w-[215px] absolute bottom-[-80px] left-1/2 -translate-x-1/2 z-10 block md:hidden" /> -->
-            <div
-             class="grid grid-cols-2 md:gap-xs px-lg md:px-0 z-0">
-                <Image
-                data-aos="fade-right"
-                data-aos-duration="1000" src={LandingImage1} alt="Landing Image 1" class="" />
-                <Image
-                  data-aos="fade-left"
-                data-aos-duration="1000"
-                 class="pt-[70%]  md:pt-0" src={LandingImage2} alt="Landing Image 2"  />
-            </div>
-
-            <!-- mobil headline -->
-            <div class="">
-            <Image src={MobilJoinThe} alt="Join The" class="w-[85%]  absolute top-[-98px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
-            <Image src={MobilClub} alt="Club!" class="w-[50%] absolute bottom-[-70px] left-1/2 -translate-x-1/2 z-10 block md:hidden" />
-            </div>
-          </div>
-
-        <!-- headline3 og knap -->
-          <div class="grid gap-xs md:gap-sm">
-              <h3
-                data-aos="fade-up"
-               class="md:text-center pt-5xl md:pt-sm">
-                Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
-                udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
-                måned efter måned.
-              </h3>
-              <a
-              data-aos="fade-up"
-               class="flex justify-center" href="/naturvinskassen">
-                <Button variant="stroke">Læs mere her</Button>
-              </a>
-          </div>
-        </div>
-
-        <!-- vinflasker -->
-        <div class="flex-col md:flex  gap-xs w-[10%] lg:w-[8%] hidden h-[70vh] lg:h-[80vh] ">
-          <Image src={Vin5} alt="Vin1" class="vippe h-full object-contain aspect-[33/100]" />
-          <Image src={Vin6} alt="Vin2" class="vippe delay h-full object-contain aspect-[33/100]" />
-          <Image src={Vin1} alt="Vin1" class="vippe  h-full w-full object-contain aspect-[33/100]" />
-          <Image src={Vin2} alt="Vin2" class="vippe delay h-full  w-full object-contain aspect-[33/100]" />
-        </div>
-
-      </section>
-     
-
+  <MainLayout title="Naturvinskassen" description="Naturvin på abonnement. At være medlem af Naturvinskassen, er faktisk ganske simpelt! Som medlem, vil du hver måned modtage 3 flasker udvalgt ...">
+    <article class="relative">
+      <div class="grid  md:grid-cols-3 relative ">
+        <Image src={HeroGif1} alt="" class="h-[55vh] object-cover hidden md:block" ></Image>
+        <Image src={HeroGif2} alt="" class="h-[55vh] object-cover" ></Image>
+        <Image src={HeroGif3} alt="" class="h-[55vh] object-cover hidden md:block" ></Image>
+       
+         <Image  src={DesktopJoinTheClub} alt="Join The Club!" class="-bottom-[6vh] md:-bottom-[19vh]  md:inset-x-2 z-10  absolute max-w-5xl mx-auto " />
+   
+      </div>
+     <!-- headline3 og knap -->
+     <div class="grid gap-xs md:gap-xs max-w-[800px] mx-auto p-xs ">
+      <h3
+   
+       class="text-center pt-sm  md:pt-lg">
+        Modtag <span class="font-bold">naturvin</span> på <span class="font-bold">abonnement</span>. Modtag tre flasker
+        udvalgt naturvin, hver måned! Kom tæt på vinbønderne og få et autentisk indblik i den naturlige vinverden,
+        måned efter måned.
+      </h3>
+      <a
+       class="flex justify-center" href="/naturvinskassen">
+        <Button variant="stroke">Læs mere her</Button>
+      </a>
+  </div>
     </article>
+
+
   <!-- HERO SEKTION
   <div class="max-w-[1000px] relative w-[455px] mt-[120px] mx-auto h-[755px] flex flex-col items-center z-[0] md:w-[897px] md:h-[799px] md:mt-[100px]"> -->
     <!-- Images -->
@@ -165,13 +121,13 @@ import flyve6 from "../assets/images/flyve6.webp";
     <div class="md:grid md:grid-cols-2 md:gap-ml md:p-ml md:items-start">
       <!-- Images -->
        <div data-aos="fade-up" class="flex flex-col md:gap-ml">
-        <Image src={HvadErNaturvin1} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
+        <Image src={HvadErNaturvin1gif} alt="Mand der hælder vin op" class="w-full h-[350px] object-cover md:h-auto" />
         <Image src={HvadErNaturvin2} alt="Billede af vin" class="w-full h-[350px] object-cover md:h-auto" />
       </div> 
 
       <!-- Text Section -->
        <div data-aos="fade-up" class="mt-ml px-xs md:px-[0px] md:sticky md:top-[20%] md:self-start">
-        <h1 class="italic mb-xxs md:mb-sm text-orange-500">
+        <h1 class="italic mb-xxs md:mb-sm ">
           Hvad er naturvin?
         </h1>
         <p class="mb-sm">
@@ -193,7 +149,7 @@ import flyve6 from "../assets/images/flyve6.webp";
   <div class="max-w-[1500px] mx-auto mt-8xl px-xs flex flex-col items-center">
     <!-- Section Title -->
     <div data-aos="fade-up" class="text-center">
-      <h1 class="italic mb-sm text-orange-500">
+      <h1 class=" mb-sm ">
       Se vine i denne måneds kasse
       </h1>
     </div>
@@ -244,10 +200,11 @@ import flyve6 from "../assets/images/flyve6.webp";
 
 
   <!-- MAD & VIN SEKTION -->
-   <div class="mt-[200px]">
+
+
 
     <section
-    class="relative bg-transparent py-16 overflow-hidden"
+    class=" mt-[200px] relative bg-transparent py-16 overflow-hidden"
     id="scrollytelling-section">
   
     <!-- Scrolling Images (z-10 to be on top of MadVin) -->
@@ -296,15 +253,15 @@ import flyve6 from "../assets/images/flyve6.webp";
 
 
 <div>
-  <h2 class="text-center italic text-orange-500 mb-s">
+  <h2 data-aos="fade-up" class="mx-5 md:text-center mb-s">
     Tre opskrifter i hver kasse
   </h2>
   <div data-aos="fade-up"
-    class="md:pb-8xl mx-s gap-sm grid grid-cols-2 md:mx-[15%] md:gap-ml">
-    <p class="mb-sm">
+    class="md:pb-8xl mx-s gap-sm grid md:grid-cols-2 md:mx-[15%] md:gap-ml">
+    <p class="">
       Hos Naturvinskassen handler det ikke kun om vin – det handler om hele oplevelsen. Hver måned får du opskrifter, der passer perfekt til vinene i kassen, og skaber en smagsrejse, hvor mad og vin går op i en højere enhed.
       </p>
-      <p class="mb-sm">
+      <p class="">
       Hver opskrift er udviklet af dygtige kokke eller restauranter. Uanset om det er en frisk sommerret til en sprød hvidvin eller en fyldig vintermåltid til en kraftig rødvin, får du inspiration til at løfte din vinoplevelse til et nyt niveau.
       </p>
   </div>
@@ -321,7 +278,7 @@ import flyve6 from "../assets/images/flyve6.webp";
 
         <!-- Text Section -->
         <div data-aos="fade-up" class="py-ml px-xs md:sticky md:top-[20%] md:self-start">
-              <h1 class="italic mb-xxs md:mb-sm text-orange-500">
+              <h1 class="italic mb-xxs md:mb-sm ">
                 Hvem er vi?
               </h1>
             <p class="text-body sm:text-body-lg font-opensans font-regular leading-relaxed mb-sm">
