@@ -5,18 +5,20 @@ import '../styles/tailwind.css';
 import 'animate.css';
 import 'aos/dist/aos.css';  
 const { title } = Astro.props;
+const { description } = Astro.props;
 ---
 <html lang="da">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://use.typekit.net/akz0sog.css">
+		<meta name="description" content={Astro.props.description}>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		
 		<title>{Astro.props.title}</title>
 	</head>
-	<body class="text-darkgrey">
+	<body class="text-darkgrey" >
 
 		<header class="sticky top-0 z-[1000]">
 			<Header></Header>
