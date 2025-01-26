@@ -11,7 +11,10 @@ import FAQ from "../assets/images/f.a.q.svg";
 ---
 
 <MainLayout>
-    <div class="max-w-[1100px] mx-auto py-2xl px-xs md:px-ml relative w-full">
+    <div
+         data-aos="fade-in"
+              data-aos-duration="1000"
+     class="max-w-[1100px] mx-auto py-2xl px-xs md:px-ml relative w-full">
         <Image src={FAQ} alt="F.A.Q." class="w-[150px] md:w-[300px] h-full justify-center items-center" />
         <div class="md:grid md:grid-cols-[3fr_1fr] md:gap-ml pt-ml md:pt-4xl md:items-start">
             <div>
@@ -30,10 +33,21 @@ import FAQ from "../assets/images/f.a.q.svg";
                 <Accordion caption="Hvordan skifter jeg leveringsmetode?" bio="For at skifte din leveringsmetode, skal du pt. tegne et nyt abonnement. Husk at stoppe dit nuværende abonnement inden du bestiller et nyt." showButton={false} />
             </div>
             <div class="hidden md:flex flex-col gap-xl h-[580px] justify-center items-center">
-                <Image src={Vin1} alt="Vin1" class="vippe delay w-[43px] h-full object-contain" />
-                <Image src={Vin2} alt="Vin2" class="vippe w-[43px] h-full object-contain" />
-                <Image src={Vin3} alt="Vin3" class="vippe delay w-[37px] h-full object-contain" />
-                <Image src={Vin4} alt="Vin4" class="vippe w-[34px] h-full object-contain" />
+                <Image
+                     data-aos="fade-up"
+                 src={Vin1} alt="Vin1" class="vippe delay w-[43px] h-full object-contain" />
+                <Image
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                 src={Vin2} alt="Vin2" class="vippe w-[43px] h-full object-contain" />
+                <Image 
+                  data-aos="fade-up"
+                   data-aos-delay="800"
+                src={Vin3} alt="Vin3" class="vippe delay w-[37px] h-full object-contain" />
+                <Image 
+                  data-aos="fade-up"
+                    data-aos-delay="1000"
+                src={Vin4} alt="Vin4" class="vippe w-[34px] h-full object-contain" />
             </div>            
         </div>
     </div>    
