@@ -1,0 +1,99 @@
+---
+export interface Props {
+  title: string; // Vin navn
+  imageSrc: string; // Billede
+  kraftig?: number; // Dots for 'Kraftig'
+  tor?: number; // Dots for 'Tør'
+  frisk?: number; // Dots for 'Frisk'
+  description?: string; // Forklaring af vin
+  notes?: string; // Smagsnoter
+}
+
+const {
+  title = "Placeholder",
+  imageSrc = "",
+  kraftig = 0,
+  tor = 0,
+  frisk = 0,
+  description = "Beskrivelse",
+  notes = "Smagsnoter",
+} = Astro.props;
+
+const createDots = (filled: number, total = 5) => {
+  return Array.from({ length: total }, (_, i) => i < filled);
+};
+---
+<div>
+  <!-- Navn på vin -->
+  <h3 class="font-bold text-orange-500">
+    {title}
+  </h3>
+
+  <!-- Vin Card -->
+  <div class="border border-orange-500 w-[264px]  lg:w-[343px] ">
+
+    <!-- Hoverable billede container -->
+    <div class="group relative flex items-center justify-center h-[276px] lg:h-[343px] border-b border-orange-500">
+      <!-- Billede -->
+      <img
+        src={imageSrc}
+        alt={title}
+        class="h-[198px] w-auto lg:h-[273px] transition-all duration-300 group-hover:opacity-0"
+      />
+      <!-- Hover indhold -->
+      <div
+        class="absolute inset-0 bg-orange-500 text-white p-xs opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center lg:p-sm"
+      >
+        <p class="text-xs mb-xxs md:text-body md:mb-xs">{description}</p>
+        <p class="text-xs font-bold md:text-body">Smagsnoter:</p>
+        <p class="text-xs md:text-body">{notes}</p>
+      </div>
+    </div>
+
+    <!-- Vin karakteristika -->
+    <div class="p-xxs text-xs text-darkgrey lg:p-xs lg:text-body grid gap-xxs">
+      <!-- Kraftig -->
+      <div class="flex items-center lg-xxs">
+        <span class="w-[55px] lg:w-[70px]">Kraftig:</span>
+        <div class="flex gap-xxs">
+          {createDots(kraftig).map((filled, i) => (
+            <div
+              class={`w-2 h-2 lg:w-3.5 lg:h-3.5 rounded-full ${
+                filled ? "bg-orange-500" : "border border-orange-500"
+              }`}
+              key={i}
+            ></div>
+          ))}
+        </div>
+      </div>
+      <!-- Tør -->
+      <div class="flex items-center ">
+        <span class="w-[55px] lg:w-[70px]">Tør:</span>
+        <div class="flex gap-xxs">
+          {createDots(tor).map((filled, i) => (
+            <div
+              class={`w-2 h-2 lg:w-3.5 lg:h-3.5 rounded-full ${
+                filled ? "bg-orange-500" : "border border-orange-500"
+              }`}
+              key={i}
+            ></div>
+          ))}
+        </div>
+      </div>
+      <!-- Frisk -->
+      <div class="flex items-center">
+        <span class="w-[55px] lg:w-[70px]">Frisk:</span>
+        <div class="flex gap-xxs">
+          {createDots(frisk).map((filled, i) => (
+            <div
+              class={`w-2 h-2 lg:w-3.5 lg:h-3.5 rounded-full ${
+                filled ? "bg-orange-500" : "border border-orange-500"
+              }`}
+              key={i}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

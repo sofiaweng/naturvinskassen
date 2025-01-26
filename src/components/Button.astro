@@ -1,0 +1,55 @@
+---
+export interface Props {
+  variant?: "filled" | "stroke"; // Typen af knap
+}
+
+const { variant = "filled" } = Astro.props; // Standardvariant er "filled"
+
+const baseClass = `
+  px-15 pt-3 font-caslon font-regular italic text-[16px]
+  sm:text-[20px] sm:px-xs sm:pt-xxs
+  rounded-desktop flex items-center justify-center transition-all duration-300
+`;
+
+const filledClass = `
+  bg-green-500 hover:bg-green-400 text-white
+`;
+
+const strokeClass = `
+  text-green-500 border border-transparent 
+  hover:bg-green-500 hover:text-white
+  shadow-[inset_0_0_0_2px_#576832] 
+`;
+---
+
+<button 
+  class={`${baseClass} ${variant === "filled" ? filledClass : strokeClass}`}
+>
+  <slot />
+</button>
+
+
+<!-- --- Stefans metode
+// henter parametrene fra Astro.props
+const { variant = "primary", size = "medium" } = Astro.props
+
+//definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
+const buttonStyling = "text-white font-bold py-2 px-6 rounded-xl"
+
+//definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
+const variantClasses = {
+    "primary": "bg-sky-500 hover:bg-sky-700",
+    "secondary": "bg-pink-500 hover:bg-pink-700"
+}
+//definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianters størrelser
+const sizeClasses = {
+    "large": "text-2xl",
+    "medium": "text-xl",
+    "small": "text-l"
+}
+---
+
+Sæt classes for den pågældende knap sammen ved hjælp af Astro class:list -->
+<!-- <div>
+    <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+</div> -->

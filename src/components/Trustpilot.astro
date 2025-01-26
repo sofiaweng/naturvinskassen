@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import Stjerne from "../assets/images/trustpilot_stjerne.svg";
+import Trustpilot from "../assets/images/Trustpilot_Ikon.svg";
+
+import Button from "../components/Button.astro";
+import TrustpilotCard from "../components/TrustpilotCard.astro";
+---
+<div class="border-t border-orange-500">
+    <div class="p-sm max-w-[1000px] mx-auto">
+        <div class="flex justify-center gap-xs md:gap-s">
+            <div>
+                <Image src={Trustpilot} alt="Trustpilot logo" />
+            </div>
+            <h2 class="self-end text-center italic ">
+                Anmeldelser på Trustpilot
+            </h2>
+        </div>
+        <p class="flex justify-center mb-m">5 ud af 5 stjerner på Trustpilot</p>
+
+        <div class="mx-auto grid md:grid-cols-3 md:gap-lg gap-m">
+            <TrustpilotCard 
+            title="Nemt, lækkert og pengene værd!"
+            description="Super koncept. Super god beskrivelse af vinen og strakslevering af førstekasse. Jeg kan varmt anbefale naturvinskassen.dk!"
+            navn="Kasper KBH"/>
+            <TrustpilotCard 
+            title="Meget tilfreds kunde gennem fire år"
+            description="Interessante vine med informative beskrivelser, og fuldstændig problemfri levering og service hver gang. Højst anbefalet."
+            navn="Kenneth Kristensen"/>
+            <TrustpilotCard 
+            title="Fremragende naturvin..."
+            description="Meget tilfreds kunde gennem seks år. Super dejlig naturvin lige til døren en gang om måneden. Dejlige madanbefaleringer som passer godt med vinen."
+            navn="Mads Bach Christensen"/>
+
+        </div>
+        <div class="flex justify-center md:justify-end mt-xs ">
+            <a href=""><Button variant="stroke">Læs anmeldelser</Button></a>
+        </div> 
+    </div>
+</div>
+

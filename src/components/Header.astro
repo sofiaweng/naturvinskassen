@@ -1,0 +1,111 @@
+---
+import Link from '../components/Link.astro'
+import { Image } from 'astro:assets';
+import Logo from "../assets/images/logo.svg";
+
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+
+---
+<style>
+    li{
+        @apply text-green-500; 
+
+    }
+</style>
+
+
+<div class="body z-50">
+    <div x-data="{ showmenu: false }" class="lg:static w-full ">
+        <div id="navbar" class="relative p-xs lg:py-s flex flex-row justify-between border-orange-500 bg-white border-b ">
+            <nav id="desktopmenu" class="hidden lg:block self-center">
+                <div class="flex flex-row gap-8">
+                <ul class="flex flex-row gap-8 self-center">
+                    <li class="ease-linear duration-200"><a href="/naturvinskassen" class=" hover:border-b border-solid border-darkgrey ease-linear  transition-all duration-200">Naturvinskassen</a></li>
+                    <li class="ease-linear duration-200"><a href="/faq" class=" hover:border-b border-solid border-darkgrey transition-all duration-200">
+                        F.A.Q.</a></li>
+                    <li class="ease-linear duration-200"><a href="/omos" class=" hover:border-b border-solid border-darkgrey transition-all duration-200">Om os</a></li>
+                </ul>
+             
+            </div>
+            </nav>
+            <div id="logo" class="lg:absolute lg:left-[49%] self-center ease-linear duration-200 ">
+                <a href="/">
+                    <Image class="w-24" src={Logo} alt="logo ikon"></Image>
+                </a>
+            </div>
+            <div class="flex flex-row gap-sm">
+                <a class="hidden lg:block p-1"  href="">
+                    <div class="w-full h-full">
+                        <div class="bg-[url('/login.svg')] hover:bg-[url('/loginhover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[34-52] w-full h-full bg-no-repeat text-transparent ">
+                           profil
+                        </div>
+                    </div>
+                    <!-- <Image class="" src={Login} alt="linkedin ikon"></Image> -->
+                </a>
+                <a href="/bestil" class="hidden lg:block self-center">
+                    <Button variant="filled">Bestil Naturvinskassen</Button>
+                </a>
+            </div>
+           
+            <!-- Burgermenu -->
+            <div id="burgermenu" class="self-center lg:hidden p-2 cursor-pointer" x-on:click="showmenu = !showmenu">
+                <template x-if="!showmenu">
+                    <!-- Burgerikon -->
+                    <div>
+                        <span class="block w-10 h-1 bg-green-500 my-2"></span>
+                        <span class="block w-10 h-1 bg-green-500 my-2"></span>
+                        <span class="block w-10 h-1 bg-green-500 my-2"></span>
+                    </div>
+                </template>
+                <template x-if="showmenu">
+                    <!-- Traditionelt kryds -->
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <span class="absolute block w-full h-1 bg-green-500 transform rotate-45 ease-in"></span>
+                        <span class="absolute block w-full h-1 bg-green-500 transform -rotate-45 ease-in"></span>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <nav id="mobilmenu" class="flex flex-col  lg:hidden   py-sm bg-white "
+            x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
+            <div class="px-xs flex justify-between pb-sm border-lightgrey border-b ">
+                <a href="/bestil"> 
+                    <Button variant="filled">Bestil Naturvinskassen</Button>
+                </a>
+               
+                <a class=""  href="">
+                    <div class="w-full h-full">
+                        <div class="bg-[url('/login.svg')] hover:bg-[url('/loginhover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[34-52] w-full h-full bg-no-repeat text-transparent ">
+                           profil
+                        </div>
+                    </div>
+                    <!-- <Image class="" src={Login} alt="linkedin ikon"></Image> -->
+                </a>
+            </div>
+            
+            <ul class="flex flex-col gap-xs  body-regular px-xs py-sm ">
+     
+                <li class=" border-solid border-darkgrey"><a href="/" class="transition-all duration-200 ease-in-out">Forside</a></li>
+                <li class=" border-solidborder-darkgrey "><a href="/naturvinskassen" class=" transition-all duration-200 ease-in-out">
+                    Naturvinskassen</a></li>
+                <li class="border-solid border-darkgrey  "><a href="/faq" class="transition-all duration-200 ease-in-out">F.A.Q.</a></li>
+                <li class="border-solid border-darkgrey  "><a href="/omos" class=" transition-all duration-200 ease-in-out">Om os</a></li>
+            </ul>
+  
+      </nav>
+    </div>
+</div>
+
+<script>
+    /* //set active class on nav when the page is active */
+    const nav = document.querySelector("#desktopmenu");
+    const navLinks = nav.querySelectorAll("a");
+    const currentURL = window.location.href;
+    navLinks.forEach((link) => {
+        if (link.href === currentURL) {
+            link.classList.add("active");
+        }
+    });
+</script>

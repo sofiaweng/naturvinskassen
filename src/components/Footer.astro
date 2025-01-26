@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import Visa from "../assets/images/visa.svg";
+import Mastercard from "../assets/images/mastercard.svg";
+import Facebook from "../assets/images/facebook.svg";
+import Instagram from "../assets/images/instagram.svg";
+import Twitter from "../assets/images/Twitter.svg";
+---
+
+<!-- selve footer -->
+<article class="flex justify-between p-xs py-sm">
+
+    <!-- Første collumn -->
+    <div class="grid gap-xs lg:flex lg:flex-row-reverse lg:gap-m ">
+        <div>
+            <!-- mangler styling -->
+            <h3 class="text-orange-500 font-semibold">Naturvinskassen</h3>
+            <p>Borggade 16 8000, århus C</p>
+
+            <!-- SOME ikoner på desktop, de bliver fjernet i tlf view -->
+            <div class=" gap-xxs pt-xs hidden lg:flex">
+                  <!-- mangler links og hover -->
+                  <a class="bg-[url('/some-fb-default.svg')] hover:bg-[url('/some-fb-hover.svg')] -ml-2  bg-center ease-linear duration-200 bg-contain aspect-[30-55] bg-no-repeat">
+                    <div class=" w-full h-full bg-no-repeat text-transparent cursor-pointer ">
+                     hey
+                    </div>
+                </a>
+                 <a class="a bg-[url('/some-x-default.svg')] hover:bg-[url('/some-x-hover.svg')]   ease-linear duration-200 bg-contain aspect-[55-55] bg-no-repeat">
+                    <div class=" w-50px h-full bg-no-repeat text-transparent cursor-pointer ">
+                     hey
+                    </div>
+                </a>
+                <a class="bg-[url('/some-ig-default.svg')] hover:bg-[url('/some-ig-hover.svg')] bg-right ease-linear duration-200 bg-contain aspect-[55-55] bg-no-repeat">
+                    <div class=" w-50px h-full bg-no-repeat text-transparent cursor-pointer">
+                     hey
+                    </div>
+                </a>
+              
+                <!-- <Image class='w-[7%]' src={Facebook} alt="facebook logo"></Image>    
+                <Image class='w-[14%]'  src={Instagram} alt="ig logo"></Image>    
+                <Image class='w-[14%]' src={Twitter} alt="x logo"></Image>     -->
+            </div>
+        </div>
+        <div>
+             <!-- mangler styling -->
+            <h3 class="text-orange-500 font-semibold">Kontakt</h3>
+            <p>
+                +45 40 38 40 12
+                <br>
+                info@reduktivt.com
+                <br>
+                CVR: 39843978
+            </p>
+        </div>
+    </div>
+    
+    <!-- Anden collumn -->
+    <div class="grid gap-xs lg:flex">
+         <!-- SOME ikoner på mobil, de bliver fjernet i desktop view -->
+        <div class="flex gap-xs justify-end lg:hidden">
+             <!-- mangler links og hover -->
+             <a class="bg-[url('/some-fb-default.svg')] hover:bg-[url('/some-fb-hover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[55-55] bg-no-repeat">
+                <div class=" w-50px h-full bg-no-repeat text-transparent cursor-pointer ">
+                 hey
+                </div>
+            </a>
+             <a class="a bg-[url('/some-x-default.svg')] hover:bg-[url('/some-x-hover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[55-55] bg-no-repeat">
+                <div class=" w-50px h-full bg-no-repeat text-transparent cursor-pointer ">
+                 hey
+                </div>
+            </a>
+            <a class="bg-[url('/some-ig-default.svg')] hover:bg-[url('/some-ig-hover.svg')] bg-center   ease-linear duration-200 bg-contain aspect-[55-55] bg-no-repeat">
+                <div class=" w-50px h-full bg-no-repeat text-transparent cursor-pointer">
+                 hey
+                </div>
+            </a>
+          
+            <!-- <a href="">
+                <div class=" w-[50%] mx-auto md:w-full ">
+                    <div class="bg-[url('/some-fb-default.svg')] hover:bg-[url('/some-fb-hover.svg')] aspect-[34-52] md:bg-[url('/bue-down.svg')] md:aspect-[191/44] md:w-[10%] bg-contain w-[20%] bg-no-repeat ">
+                </div>
+            </a>
+            -->
+            <!-- <Image class='w-[8%]' src={Facebook} alt="facebook logo"></Image>    
+            <Image class='w-[16%]'  src={Instagram} alt="ig logo"></Image>    
+            <Image class='w-[16%]' src={Twitter} alt="x logo"></Image>     -->
+        </div>
+        <div class="flex-col flex text-right underline lg:justify-center">
+            <a href="">Privatlivspolitik</a>
+            <a href="">Handelsbetingelser</a>
+            <a href="">Abonnementsbetingelser</a>
+        </div>
+        <div class="flex gap-xxs justify-end lg:justify-center lg:flex-col">
+            <Image class='w-[30%] lg:w-m' src={Visa} alt="visa logo"></Image>    
+            <Image class='w-[30%] lg:w-m' src={Mastercard} alt="visa logo"></Image>    
+        </div>
+    </div>
+</article>
