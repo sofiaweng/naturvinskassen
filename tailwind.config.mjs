@@ -67,19 +67,19 @@ export default {
 
       fontSize: {
         display: ["48px", { lineHeight: "62px" }], // Mobile
-        "display-lg": ["96px", { lineHeight: "110px" }], // Desktop
+        "display-desktop": ["96px", { lineHeight: "110px" }], // Desktop
 
         headline1: ["32px", { lineHeight: "auto" }], // Mobile
-        "headline1-lg": ["64px", { lineHeight: "60px" }], // Desktop
+        "headline1-desktop": ["64px", { lineHeight: "60px" }], // Desktop
 
         headline2: ["24px", { lineHeight: "auto" }], // Mobile
-        "headline2-lg": ["32px", { lineHeight: "auto" }], // Desktop
+        "headline2-desktop": ["32px", { lineHeight: "auto" }], // Desktop
 
         headline3: ["16px", { lineHeight: "auto" }], // Mobile
-        "headline3-lg": ["20px", { lineHeight: "auto" }], // Desktop
+        "headline3-desktop": ["20px", { lineHeight: "auto" }], // Desktop
 
         body: ["14px", { lineHeight: "auto" }], // Mobile
-        "body-lg": ["16px", { lineHeight: "auto" }], // Desktop
+        "body-desktop": ["16px", { lineHeight: "auto" }], // Desktop
       },
 
       fontWeight: {

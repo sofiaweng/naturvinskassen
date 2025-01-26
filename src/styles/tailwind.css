@@ -19,27 +19,30 @@
   h1,
   h2 {
     @apply font-caslon;
+    @apply italic;
+    @apply text-orange-500;
   }
   h1 {
     @apply text-headline1;
-    @apply sm:text-headline1-lg;
+    @apply sm:text-headline1-desktop;
     @apply font-semibold;
   }
   h2 {
     @apply text-headline2;
-    @apply sm:text-headline2-lg;
+    @apply sm:text-headline2-desktop;
     @apply font-regular;
   }
   h3 {
     @apply font-opensans;
     @apply text-headline3;
-    @apply sm:text-headline3-lg;
+    @apply sm:text-headline3-desktop;
+    @apply font-semibold;
   }
 
   p,
   a {
     @apply text-body;
-    @apply sm:text-body-lg;
+    @apply sm:text-body-desktop;
     @apply font-opensans;
     @apply font-regular;
   }
